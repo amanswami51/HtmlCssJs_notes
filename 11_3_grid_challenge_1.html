@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid_challenge_1</title>
+    <style>
+        .container{
+            display: grid;
+            grid-gap: 10px;
+            grid-template-columns: repeat(6,130px);
+            grid-template-rows: repeat(12,430px);
+        }
+        .c1{
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(2,210px); */
+            grid-template-rows: repeat(auto-fill,minmax(210px,1fr));
+        }
+        .c2{
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(3,136px); */
+            grid-template-rows: repeat(auto-fill,minmax(136px,1fr));
+        }
+        .c3{
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(4,99px); */
+            grid-template-rows: repeat(auto-fill,minmax(99px,1fr));
+        }
+        .c4{
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(6,62.5px); */
+            grid-template-rows: repeat(auto-fill,minmax(62.5px,1fr));
+        }
+        .c5{
+            display: grid;
+            grid-gap: 10px;
+            /* grid-template-rows: repeat(12,26.3px); */
+            grid-template-rows: repeat(auto-fill,minmax(26.3px,1fr));
+        }
+        .item{
+            background-color: aqua;
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+       <div class="item">box 1</div>
+       <div class="c1">
+            <div class="item">box 2</div>
+            <div class="item">box 3</div>
+        </div>
+        <div class="c2">
+            <div class="item">box 4</div>
+            <div class="item">box 5</div>
+            <div class="item">box 6</div>
+        </div>
+        <div class="c3">
+            <div class="item">box 7</div>
+            <div class="item">box 8</div>
+            <div class="item">box 9</div>
+            <div class="item">box 10</div>
+        </div>
+        <div class="c4">
+            <div class="item">box 11</div>
+            <div class="item">box 12</div>
+            <div class="item">box 13</div>
+            <div class="item">box 14</div>
+            <div class="item">box 15</div>
+            <div class="item">box 16</div>
+        </div>
+        <div class="c5">
+            <div class="item">box 17</div>
+            <div class="item">box 18</div>
+            <div class="item">box 19</div>
+            <div class="item">box 20</div>
+            <div class="item">box 21</div>
+            <div class="item">box 22</div>
+            <div class="item">box 23</div>
+            <div class="item">box 24</div>
+            <div class="item">box 25</div>
+            <div class="item">box 26</div>
+            <div class="item">box 27</div>
+            <div class="item">box 28</div>
+        </div>
+</body>
+</html>

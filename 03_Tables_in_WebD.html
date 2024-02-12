@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in WebD</title>
+    <style>
+        #first{
+            background-color: lightblue; 
+        }
+        /*border-style values = dotted, dashed,solid, double*/
+        table,th,td{
+            border: 2px dashed blue;
+            text-align: center;
+            border-collapse: collapse;
+            /*
+            border-radius: 10px;
+            border-spacing: 20px;
+            */
+        }
+
+        th{
+            padding: 10px 15px 20px 15px;
+            /*vertical-align: middle;*/ /*top, bottom, middle*/
+        }
+
+        
+        /* tr:nth-child(even){
+            background-color: lightblue;
+        } */
+        
+        tr:hover{
+            border-bottom: 2px solid red;
+            background-color: yellow !important;   
+        }
+
+        #second{
+            background-color:lightpink
+        }
+
+        .capsecond{
+            caption-side: bottom;
+        }
+    </style>
+</head>
+<body>
+    <!-- Add a container element (like <div>) with style="overflow-x:auto;" around the <table> element to make it responsive: -->
+    <table style="width: 100%;" id="first">
+        <colgroup>
+            <col span="1" >
+            <col span="3" style="background-color: green;">
+        </colgroup>
+        <caption>class information</caption>
+        <tr style="height: 50px;">
+            <th>sr</th>
+            <th>name</th>
+            <th>roll no.</th>
+            <th>branch</th>
+            <th style="width:10%;">Score</th>
+        </tr>
+        <tr>
+            <td>1.</td>
+            <td>aman</td>
+            <td>2125700</td>
+            <td>cse</td>
+            <td>8</td>
+        </tr>
+        <tr>
+            <td>2.</td>
+            <td>taanish</td>
+            <td>2125701</td>
+            <td>ME</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>3.</td>
+            <td>kajal</td>
+            <td>2125702</td>
+            <td>ME</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>4.</td>
+            <td>shankar</td>
+            <td>2125703</td>
+            <td>ME</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td colspan="4">Total score</td>
+            <td>38</td>
+        </tr>
+    </table>
+
+
+        <!-- all tags of table
+        <table>	   Defines a table
+        <th>       Defines a header cell in a table
+        <tr>       Defines a row in a table
+        <td>       Defines a cell in a table
+        <caption>  Defines a table name
+        <colgroup> Specifies a group of one or more columns in a table for formatting
+        <col>      Specifies column properties for each column within a <colgroup> element
+        <thead>	   Groups the header content in a table
+        <tbody>	   Groups the body content in a table
+        <tfoot>	   Groups the footer content in a table 
+        -->
+
+        <!-- 
+            properties use for colgroup
+            1. width
+            2. visibility
+            3. background
+            4. border
+         -->
+         <br><br>
+        <table id="second">
+            <caption class="capsecond">Time table</caption>
+            <colgroup>
+                <col span="3">
+                <!-- <col span="2" style="visibility:collapse;"> -->
+            </colgroup>
+            <tr>
+                <th></th>
+                <th>MON</th>
+                <th>TUE</th>
+                <th>WED</th>
+                <th>THU</th>
+                <th>FRI</th>
+            </tr>
+            <tr>
+                <th>8:00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>9:00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>10:00</th>
+                <td rowspan="2"></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>11:00</th>
+                <!-- <td></td> -->
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <th>12:00</th>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+</body>
+</html>

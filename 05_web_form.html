@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+
+        form {
+            border: 1px solid green;
+            margin: 10px;
+            background-color: rgb(197, 238, 224);
+            border-radius: 4px;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .p_class {
+            color: green;
+            font-size: 30px;
+        }
+
+        #id1 {
+            background-color: greenyellow;
+            overflow: hidden;
+        }
+        /*
+        */
+
+        #id2{
+            padding: 10px;
+        }
+
+        input[type="submit"], input[type="reset"]{
+            background-color: yellow;
+            border: none;
+            font-size: 20px;
+            padding: 6px;
+            border-radius: 3px;
+            width: 40%;
+        }
+
+        input[type="submit"]:hover, input[type="reset"]:hover{
+            background-color: burlywood;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        input[type="email"],
+        input[type="date"],
+        input[type="password"]{
+            width: 100%;
+            padding: 5px;
+            font-size: 15px;
+            color: blueviolet;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+    </style>
+</head>
+
+<body>
+    <form action="test.php">
+        <div id="id1">
+            <h1>Payment Form</h1>
+        </div>
+            <p>Required fields are followed by *</p>
+        <div id="id2">
+            <p class="p_class">Contact Information</p>
+            <p>Name: *<input type="text" name="Name" placeholder="Enter your name" required></p>
+            <p>Father Name: <input type="text" name="Father name" placeholder="Enter your Father name"></p>
+            <p>Roll number: <input type="number" name="Roll number"></p>
+            <p>Mobile number:*<input type="number" name="Mobile number" required></p>
+            <p>Email:* <input type="email" name="email" required></p>
+
+            <fieldset>
+                <legend>Gender</legend>
+                <p>
+                    Male<input type="radio" name="gender">
+                    Female <input type="radio" name="gender">
+                </p>
+            </fieldset>
+
+            <p>Address: <textarea name="address" id="address" cols="70" rows="2"></textarea></p>
+            <p>pincode: <input type="number" name="pincode"></p>
+
+            <p class="p_class">Payment Information</p>
+            <p>Card Type:*
+                <select name="card type" id="card_type" required>
+                    <option value="">--select card type--</option>
+                    <option value="visa">Visa card</option>
+                    <option value="rupey">Rupey card</option>
+                    <option value="matercard">Master card</option>
+                </select>
+            </p>
+            <p>Card number:* <input type="number" name="card_number" required></p>
+            <p>Expire Date:* <input type="date"></p>
+            <p>CVV:* <input type="password"></p>
+
+            <input type="submit" value="Pay Now">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+
+    <!-- 
+        name :- This type of attribute in which we can made any folder like username, surname, gender, class, email.
+        value:- This type of attrubute in which we store value of username, surname, gender, class, email
+
+        <input type= "password, radio, checkbox, file, submit, reset, image, text, number, email, date">
+     -->
+</body>
+
+</html>

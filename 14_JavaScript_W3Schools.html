@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript w3schools</title>
+</head>
+
+<body>
+    <!-- index -->
+    <!-- 
+        page1:- What can JavaScript do
+        page2:- JavaScript Output
+        page3:- JavaScript Objects
+        page4:- JavaScript Strings
+        page5:- JavaScript Numbers and numbers methods
+        page6:- JavaScript Array
+     -->
+
+
+
+    <!--****************** page1 *******************-->
+    <!-- 1. show time and date
+        //another tag content change
+        <button onclick="document.getElementById('demo').innerHTML = Date()">Click</button>
+        <p id="demo"></p>
+        
+        //self tag content change
+        <button onclick="this.innerHTML=Date()">The time is?</button>
+    -->
+
+    <!--2. javascript can change content of dom 
+        <p id="id1">hello.</p>
+        <button onclick='document.getElementById("id1").innerHTML = "Namste"'>Click</button>
+     -->
+
+    <!--3. JavaScript can change attribute
+        <button onclick="document.getElementById('id1').src='pic_bulbon.gif'">Turn on the light</button>
+        <img id="id1" src="pic_bulboff.gif" style="width:100px">
+        <button onclick="document.getElementById('id1').src='pic_bulboff.gif'">Turn off the light</button>
+    -->
+
+    <!--4. JavaScript can change css
+        <p id="id1">hello this is aman.</p>
+        <button onclick="document.getElementById('id1').style.color = 'red' "></button>
+    -->
+
+    <!-- 5. JavaScript can hide HTML elements.
+        <p id="id1">hello this is aman.</p>
+        <button onclick="document.getElementById('id1').style.display = 'none' "></button>
+    -->
+
+    <!-- 6. JavaScript can show hiden HTML elements.
+        <p id="id1" style="display:none;">hello this is aman.</p>
+        <button onclick="document.getElementById('id1').style.display = 'block' "></button>
+    -->
+
+
+
+    <!--****************** page2 ****************** -->
+    <!--1 Output show on website
+            <script>
+                document.write(4*5);
+            </script>
+    -->
+
+    <!-- 2. Output show in tag
+            <p id="demo"></p>
+            <script>
+                document.getElementById("demo").innerHTML = "The sum of 5 and 6 is " +(5 + 6)+ ".";
+            </script>
+    -->
+
+    <!-- 3. Output on window alert
+                <script>
+                    window.alert(5 + 6);
+                </script>
+    -->
+
+    <!-- 4. Output on console
+                <script>
+                    console.log(5 + 6);
+                </script>
+    -->
+
+
+    <!--*********************page3 *********************-->
+    <!-- 1. JavaScript Objects
+            // Create an object:
+                const person = {
+                    firstName: "John",
+                    lastName: "Doe",
+                    id: 5566,
+                    fullName: function() {
+                        return this.firstName + " " + this.lastName;
+                    }
+                };
+            // Display data from the object:
+                document.getElementById("demo").innerHTML = person.fullName();
+    -->
+
+
+    <!--*********************page4 *********************-->
+    <!-- 1. JavaScripts strings
+            var x = 'It\'s alright';
+            var y = "We are the so-called \"Vikings\" from the north.";
+            document.getElementById("demo").innerHTML = x + "<br>" + y; 
+    -->
+
+
+    <!--*********************page5 *********************-->
+    <!-- numbers -->
+    <!-- 1.  
+            let x = 100 / "Apple";
+            document.getElementById("demo").innerHTML = isNaN(x); //give 'true' answer // NaN:- not a number
+    -->
+    <!-- 2.
+            let x = 0xa; //a to f write and get hexadecimal values
+            document.getElementById("demo").innerHTML = x;
+    -->
+    <!-- 3.
+            let x = 123; // x is a number
+            let y = new Number(123); // y is a Number object
+            document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+    -->
+    <!-- numbers methods -->
+    <!-- 1. any-number.toString(base of no. system we want that system)
+            let myNumber = 32;
+            document.getElementById("demo").innerHTML =
+                "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+                "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+                "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+                "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+                "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+                "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+                "Binary (base 2): " + myNumber.toString(2);
+    -->
+    <!-- 2. variable.valueOf()
+        let x = 123;
+        let y = "hello";
+        document.getElementById("demo").innerHTML = x.valueOf() + "<br>" + y.valueOf();
+    -->
+    <!-- 3. .toExponential()
+        let x = 9.656;
+        document.getElementById("demo").innerHTML =
+            x.toExponential() + "<br>" +        //9.656e+0
+            x.toExponential(2) + "<br>" +       //9.66e+0
+            x.toExponential(4) + "<br>" +       //9.6560e+0
+            x.toExponential(6);                 //9.656000e+0
+    -->
+    <!-- 4. .toFixed()
+        let x = 9.656;
+        document.getElementById("demo").innerHTML =
+            x.toFixed(0) + "<br>" +     //10
+            x.toFixed(2) + "<br>" +     //9.66
+            x.toFixed(4) + "<br>" +     //9.6560
+            x.toFixed(6);               //9.656000
+    -->
+    <!-- 5. .toPrecision
+        let x = 9.656;
+        document.getElementById("demo").innerHTML = 
+            x.toPrecision() + "<br>" +     //9.656
+            x.toPrecision(2) + "<br>" +    //9.6
+            x.toPrecision(4) + "<br>" +    //9.656
+            x.toPrecision(6);              //9.65600
+    -->
+    <!-- 6. Number()
+        document.getElementById("demo").innerHTML = 
+            Number(true) + "<br>" + Number(false) + "<br>" + Number("10") + "<br>" + Number("10.33") + "<br>" +    //return 1, 0, 10, 10.33
+            Number("10,33") + "<br>" + Number("10 33") + "<br>" + Number("John");       // return NaN
+    -->
+    <!-- 7. parseInt()
+        document.getElementById("demo").innerHTML = 
+            parseInt("-10") + "<br>" +          // return  -10
+            parseInt("-10.33") + "<br>" +       // return  -10
+            parseInt("10") + "<br>" +           // return  10        
+            parseInt("10.33") + "<br>" +        // return  10
+            parseInt("10 6") + "<br>" +         // return  10
+            parseInt("10 years") + "<br>" +     // return  10  
+            parseInt("years 10");               // return  NaN
+    -->
+    <!-- 8. parseFloat()
+        document.getElementById("demo").innerHTML = 
+            parseFloat("10") + "<br>" +         // return  10
+            parseFloat("10.33") + "<br>" +      // return  10.33
+            parseFloat("10 6") + "<br>" +       // return  10
+            parseFloat("10 years") + "<br>" +   // return  10
+            parseFloat("years 10");             // return  NaN
+    -->
+    <!-- 9. .MAX_VALUE, .MIN_VALUE
+        //Give maximum number
+            let x = Number.MAX_VALUE;
+            document.getElementById("demo").innerHTML = x;
+
+        //Give minimum number
+            let x = Number.MIN_VALUE;
+            document.getElementById("demo").innerHTML = x;
+    -->
+
+
+    <!--******************* page6 ******************* -->
+    <!-- 1. loop through an array
+        <p id="demo"></p>
+
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let text = "<ol>";
+        for (let i = 0; i < fruits.length; i++) {
+        text += "<li>" + fruits[i] + "</li>";
+        }
+        text += "</ol>";
+        document.getElementById("demo").innerHTML = text;
+
+    -->
+    <!-- 2. Add new element in array without using the push() method.
+    <input id="id1" onkeyup="myFunction()">position</input><br><br>
+    <input id="id2" onkeyup="myFunction()">Enter data</input>
+    <p id="demo"></p>
+
+    <script>
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = fruits;
+
+        function myFunction() {
+	        var a = document.getElementById("id1").value;
+            fruits[a-1] = document.getElementById("id2").value;
+            document.getElementById("demo").innerHTML = fruits;
+        }
+    </script>
+    -->
+    <!-- 3. TO check array or not
+        const fruits = ["Banana", "Orange", "Apple"];
+        document.getElementById("demo").innerHTML = Array.isArray(fruits);  //It return true
+    -->
+
+    <!--******************* last-page ******************* -->
+    <!-- 1. find typeof variable
+            document.getElementById("demo").innerHTML = typeof "" + "<br>" + typeof "John" + "<br>" + typeof 5 ;
+    -->
+    <script>
+    </script>
+</body>
+
+</html>

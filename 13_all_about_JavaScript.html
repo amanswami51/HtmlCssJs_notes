@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>all about JavaScript</title>
+    <!-- External javascript
+        <script src="file-name.js"></script>  
+     -->
+</head>
+
+<body>
+    <!-- index
+        page1:- variables, arithmatic operations
+        page2:- Strings
+        page3:- Navigating The DOM
+        page4:- If-else, switch conditional statement
+        page5:- Array and Objects
+        page6:- Functions
+        page7:- loops
+        page8:- Alert, Prompt, Confirm
+        page9:- Events Listening to events
+        page10:- SetInterval and SetTimeout
+        page11:- Date and time
+        page12:- Math object
+        page13:- Working with JSON
+        page14:- Logic code
+        page15:- Promise
+        page16:- classes
+    -->
+
+    <h1>Hello</h1>
+    <p>This is aman swami.</p>
+    <!-- Internal JavaScript -->
+    <script>
+
+
+        /***************** page1 *****************/
+        /*
+            var a = 78; //integer type 
+            var a2 = 'a'; //char type
+            var b = "aman"; //string type
+            c = 34.5; //float type
+            console.log("The value of a is " + a);
+            console.log("The value of b is " + b);
+            console.log(`The value of c is ${c}`);
+            // arithmatic operations 
+            var num1 = 10;
+            var num2 = 2;
+            console.log("Addition of num1 and num2 is " + (num1 + num2));
+            console.log("Subtraction of num1 and num2 is " + (num1 - num2));
+            console.log("Multiplication of num1 and num2 is " + (num1 * num2));
+            console.log("Division of num1 and num2 is " + (num1 / num2));
+            console.log("Power of num1 ** num2 is " + (num1 ** num2));
+            console.log("The value of num1++ is " + (num1++));
+            console.log("The value of ++num1 is " + (++num1));
+    
+            //concept of "let" datatype
+            let a = "outside";
+            let myVar2 = "string";
+            let myVar3 = true;
+            let myVar4 = null;
+            let myVar5 = undefined;
+            {
+                let a = "inside"; //scope in this block
+                console.log(a); // output: inside
+            }
+            console.log(a); // output: outside
+    
+            //concept of const datatype
+            const b = "This cannot be changed";
+            b = "I want to change b"; //This generate error
+            console.log(b);
+        */
+
+
+        /***************** page2 *****************/
+        /*
+            //strings in javascript
+            var name = "aman";
+            var lastname = "swami";
+            console.log(`What is your name : ${name} ${lastname}`);
+            console.log(name.length);
+            //Create string by constructor method
+            var y = new String("This");
+            console.log(y);
+    
+    
+            var s = "His name is singha. ";
+            console.log(s);
+            //searching index start from zero
+            //*****************"indexOf" method give output of First occurence of a substring*****************
+            var position = s.indexOf('is');
+            console.log(position);
+    
+            // "lastIndexOf" method of occurence of substring*****************
+            position = s.lastIndexOf('is');
+            console.log(position);
+    
+            // "slice" method of string*****************
+            var word = s.slice(1, 6); //print index 1 to 5;
+            console.log(word);
+    
+            // "substring" method of string*****************
+            var word = s.substring(1, 6); //print index 1 to 5;
+            console.log(word);
+    
+            // "substr" method*****************
+            var word = s.substr(1, 6); //print index 1 to 6;
+            console.log(word);
+    
+            // "replace" method use to replace any word inside the string*****************
+            var replace_var = s.replace('singha', 'king');
+            console.log(s);
+            console.log(replace_var);
+    
+            // "toUpperCase" method and "toLowerCase" method*****************
+            console.log(s.toUpperCase());
+            console.log(s.toLowerCase());
+    
+            // "concat" mathod is use for connect two strings*****************
+            var newstring = s.concat('He was a punjabi singer');
+            console.log(newstring);
+    
+            // remove white spaces from first and last*****************
+            var strWhitespaces = "      My name is aman         swami       ";
+            console.log(strWhitespaces);
+            console.log(strWhitespaces.trim());
+    
+            // "charAt" method is use to return character from string*****************
+            var char_1 = s.charAt(2);   //first method of extracting character from string
+            var char_2 = s.charCodeAt(2);   //return code of code that was extract from string 
+            console.log(char_1);
+            console.log(char_2);
+    
+            console.log(s[2]);  //second method of extracting character from string
+
+
+            // match() method
+                <p id="demo"></p>
+                var str = "The rain in SPAIN stays mainly in the plain"; 
+                var res = str.match(/ain/g);  //  /ain/g
+                document.getElementById("demo").innerHTML = res;
+
+            //split() method
+                <p id="demo"></p>
+                let text = "hello my name is aman";
+                const myArray = text.split("o");
+                document.getElementById("demo").innerHTML = myArray[0];
+
+            //To remove extra spaces
+                let a = "   My  name is                    aman   swami. I am engineer                by professions           .       ";
+                let b = a.split(/[ ]+/);
+                let c = b.join(" ");
+
+            //any-number.toString(base of no. system we want that system)
+                let myNumber = 32;
+                document.getElementById("demo").innerHTML =
+                    "Decimal 32 = " + "<br><br>" + 
+                    "Hexatrigesimal (base 36): " + myNumber.toString(36) + "<br>" +
+                    "Duotrigesimal (base 32): " + myNumber.toString(32) + "<br>" +
+                    "Hexadecimal (base 16): " + myNumber.toString(16) + "<br>" +
+                    "Duodecimal (base 12): " + myNumber.toString(12) + "<br>" +
+                    "Decimal (base 10): " + myNumber.toString(10) + "<br>" +
+                    "Octal (base 8): " + myNumber.toString(8) + "<br>" +
+                    "Binary (base 2): " + myNumber.toString(2);
+        */
+
+
+
+        /***************** page3 *****************/
+        /*
+                JavaScript can access an element with a specified id by using the 
+                document.getElementById("id-name") method
+        
+                JavaScript can access elements with a specific class name with the
+                document.getElementsByClassName("class-name") method 
+    
+                //JavaScript can change content.
+                document.getElementById("demo").innerHTML = "<h1>call me aman.</h1>";
+                document.querySelector("#demo").innerHTML = "<h1>call me aman.</h1>"; //It also change content
+                demo.innerHTML = "<h1>call me aman.</h1>"; //It also change content
+    
+                //JavaScript can change styles.
+                document.getElementById("demo").style.color = "red";
+    
+                //JavaScript can change attributes.
+                document.getElementById("demo").title = "title attribute change by JavaScript";
+
+                //css selector by JavaScript*********
+                    //let sel = document.querySelector('.container');
+                    //let sel = document.querySelector('#main>ul>li'); //select only first li
+                    //let sel = document.querySelectorAll('#main>ul>li'); //select all li
+
+                //JavaScript can access data of input tag
+                    <p><input id="id1" onkeyup="fun()">Enter your name.</p>
+                    <p id="id2"> </p>
+                    function fun(){
+                        var a;
+                        a = document.getElementById('id1').value ;
+                        document.getElementById('id2').innerHTML = a;
+                    }
+
+
+        */
+
+
+        /***************** page4 *****************/
+        /*
+            //if-else conditions***************** 
+           let age = 20;
+           if(age<18){
+            console.log("You cannot attend the party");
+           }
+           else if(age==18){
+            console.log("You enter in party but not drink");
+           }
+           else{
+            console.log("You can do everthing in the party");
+           }
+    
+    
+           //switch case statements*****************
+           let x= 10,y=2,selection=2;
+           switch(selection){
+            case 1: console.log("Addition of x and y is "+(x+y));
+            break;
+            case 2: console.log("subtraction of x and y is "+(x-y));
+            break;
+            case 3: console.log("multiply of x and y is "+(x*y));
+            break;
+            case 4: console.log("division of x and y is "+(x/y));
+            break;
+            default: console.log("error");
+            break;
+           }
+        */
+
+
+
+        /***************** page5 *****************/
+        /*
+           
+        //concepts of objects*****************
+                let employee = {
+                    name: "Harry",
+                    salary: 10,
+                    channel1: "codewithhary",
+                    channel2: "Programmingwithharry",
+                    "channel 3": "codewithharrynotes",
+                }
+                //console.log(employee);
+                console.log(employee.name);
+                console.log(employee.salary);
+                console.log(employee.channel1);
+                console.log(employee.channel2); // console.log(employee['channel2']);
+                //console.log(employee.channel 3); //give error
+                console.log(employee['channel 3']); //solve above error    
+
+                //convert objects tags into array by using "Object.keys(TakeAnyobject)" ***************
+                const age = {taanish:18.5, harish:20, govind:20.5, aman: 22, naveen:20}
+                console.log(age);
+                console.log(Object.keys(age));
+                Object.keys(age).forEach((tag)=>{
+                    console.log(tag);
+                    console.log(age[tag]);
+                })
+
+        //concept of array in javascript*****************
+                //let AllinOne = [1, 10, 4, "Harry",true,null,undefined];    //first way of making an array
+                //let AllinOne = new Array(1, 10, 4, "Harry",true,null,undefined)    //second way of making an array by using "new Array()" method
+                //console.log(AllinOne); //method first for print the array
+    
+            //method second for print the array
+                //console.log(AllinOne[0]);
+                //console.log(AllinOne[1]);
+    
+            //console.log(AllinOne.length);   //calculate the length of an array
+            //AllinOne.push('I am aman');     //for adding new element inside array
+            //console.log(AllinOne);
+
+            //AllinOne.pop(); //this delete last element of array
+
+            //change value of array
+                AllinOne[0] = 5;
+    
+            //declare the array size*****************
+                //let aman = new Array(20);
+                //console.log(aman);
+    
+            // The join() method converts the array into a string.
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo").innerHTML = fruits.join(" ");
+
+            //The concat() method merges (concatenates) arrays:
+                const mybrother = ["Sunder", "Hetram", "Vansh"];
+                const mysister = ["Pooja", "Rajbala", "kajal", "Payal"];
+                const myfriend = ["Harish", "Govind", "Tanish"];
+                const dear = mysister.concat(mybrother, myfriend);
+                document.getElementById("demo").innerHTML = dear;
+
+            //The splice() method adds new elements to an array
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo1").innerHTML = fruits;
+                fruits.splice(2,0,"Lemon", "Kiwi", "kakdi");
+                document.getElementById("demo2").innerHTML = fruits;
+
+            //The toString() method returns an array as a comma separated string
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo").innerHTML = fruits.toString();
+
+            //The unshift() method adds new elements to the beginning of an array
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo1").innerHTML = fruits;
+                fruits.unshift("Lemon");    //fruits.shift(); is use to remove element first element of array
+                document.getElementById("demo2").innerHTML = fruits;
+            
+            //slice() method, it selects array elements from the start argument, and up to (but not included) the end argument.   
+                const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+                const citrus = fruits.slice(1,3);
+                document.getElementById("demo").innerHTML = citrus; // Orange, Lemon
+
+            //Array methods:- 
+                1). array.map(), loops and returns an array.
+                    let numArr = [1, 2, 3, 4, 5, 6];
+                    let a = numArr.map((element)=>{
+                        return element;
+                    })
+                    console.log(a); //[1, 2, 3, 4, 5, 6]
+
+                2). array.filter(), loops and returns an array with matching conditions
+                    let numArr = [1, 2, 3, 4, 5, 6];
+                    let b = numArr.filter((element)=>{
+                        return element>3;
+                    })
+                    console.log(b); //[4,5,6]
+
+                3). //array.reduce(call-back, prev_value)
+                    let c = [1, 2, 3].reduce((prev, curr)=>{
+                        return prev + curr;
+                    }, 0)
+                    console.log(c); //6
+
+
+        //JavaScript Array Sort*****************
+            //sort() method sorts an array in ascending order (alphabetically).
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo1").innerHTML = fruits;
+                fruits.sort();
+                document.getElementById("demo2").innerHTML = fruits;
+
+            //By combining sort() and reverse() you can sort an array in descending order
+                const fruits = ["Banana", "Orange", "Apple", "Mango"];
+                document.getElementById("demo1").innerHTML = fruits;
+                fruits.sort();  // First sort the array
+                fruits.reverse();   // Then reverse it:
+                document.getElementById("demo2").innerHTML = fruits;
+
+            //Sort the array in ascending order, only for numbers
+                const points = [40, 100, 1, 5, 25, 10];
+                document.getElementById("demo1").innerHTML = points;  
+                points.sort(function(a, b){return a - b});  //return b-a; for descending order
+                document.getElementById("demo2").innerHTML = points;
+
+        */
+
+
+
+        /***************** page6 *****************/
+        /*
+            //define greet() function
+                function greet(x) {
+                    // console.log(x+" is a good boy.");
+                    console.log(`${x} is a good boy.`);
+                }
+    
+            //define sum() function
+                function sum(a,b,c){
+                let d = a+b+c;
+                return d;
+                }
+                
+            //call the greet function 
+                let name1 = "Harry";
+                greet(name1);
+
+            //call the sum() function
+                console.log("Sum of three number(1,2,3) : "+sum(1,2,3));
+
+            //Arrow Function****************
+                let greet = () => {
+                    console.log("Good Morning");
+                }
+                greet();
+
+                let sum2 = (a, b) => {
+                    return a + b;
+                }
+
+                //let sum2 = (a,b) => a+b; //we also write sum2 function in second way
+                console.log(sum2(5, 6)); 
+
+            // Arrow Function in the objects
+                let obj1 = {
+                    greeting: "Good Morning ",
+                    names: ["Harry", "Rohan", "SkillF", "Djkjiladi"],
+                    speak(){
+                            obj1.names.forEach(
+                                (student) => {
+                                    console.log(obj1.greeting + "Kukdoo koo "+student);
+                                }
+                            );
+                    }
+                }
+                obj1.speak();
+                
+
+                //setTimeout(function-name, function timing in ms, function-arguments);
+                    setTimeout((a)=> {console.log("My name is " + a);}, 2000, "aman");
+
+        */
+
+
+        /***************** page7 *****************/
+        /*
+        //for loop in JS*******        
+            for(let i = 0;i<3;i++){
+                console.log(i);
+            }
+        
+        //for loop for arrays********
+            let friends = ["aman", "naveen", "shankar", "taanish", "kajal", "mani", "ranjana"];
+        //1st method for printing the array
+            for(let i = 0; i < friends.length; i++) {
+                console.log(friends[i]);
+            }
+        
+        //2nd method for printing the array******
+            for (i in friends) {
+                console.log(friends[i]);
+            }
+            
+        //3rd method for printing the array******
+            for (i of friends) {
+                console.log(i);
+            }
+            
+        //4rth method for printing the array******
+            friends.forEach((i)=> {
+                    console.log(i);
+                }      
+            );
+        
+        
+        //for loop for objects********
+            let employee = {
+                name: "harry",
+                salary: 2,
+                channel: "CWH",
+            }
+            for(i in employee){ //here "i" refers to label like name,salary, channel.
+                console.log(employee[i]);
+            }
+
+        //while loop*********
+            let i = 0;
+            while(i<4){
+                console.log(`${i} is less than 4`);
+                i++;
+            }
+
+        //do-while loop*******
+            let j = 0;
+            do{
+                console.log(`${j} is less than 4`);
+                j++;
+            }while(j<4);
+
+        */
+
+
+        /***************** page8 *****************/
+        /*
+        //Alert in in-browser JavaScript, does not return anything*******
+            alert("You learn many more from this website");
+
+        //confirm" in JS****************
+            let deletePost = confirm("Do you really want to delete this post");
+            //confirm return true or false
+            //if we press "ok" then confirm return "true".
+            //if we press "cancel" then confirm return "false".
+        
+            if(deletePost){
+                console.log("Your post has been deleted successfully");
+            }
+            else{
+                console.log("Your post has not been deleted");
+            }
+        
+        //"prompt" in Js***************
+            let name = prompt("What is your name?","Guest name");
+            console.log(name);
+
+        //Quick Quize****************
+        let age = prompt("Enter your age for visiting this website","18");
+        console.log(age);
+        if(age<18){
+            alert("You can't use this website content");
+        }
+        else{
+            alert("You can use this website content")
+        }   
+        */
+
+
+        /***************** page9 *****************/
+        /*
+        Browser envents: click, contextmenu, mouseover/mouseout, mousedown/mouseup, mousemove, submit, focus, DOMCotentLoaded, transitionend    
+        //body content
+            <p id="pera">Hello my name is aman swami.</p>
+            <button id="btn" onclick="fun()">show</button>
+
+        //script content
+            function fun(){
+                let pera = document.getElementById('pera');
+                let btn = document.getElementById('btn');
+                if(pera.style.display != 'none' || btn.innerHTML == 'hide'){
+                    pera.style.display = 'none';
+                    btn.innerHTML = 'show'
+                }
+                else{
+                    pera.style.display = 'block';
+                    btn.innerHTML = 'hide'
+                }
+            }
+        
+        //mouseover event
+            let pera = document.getElementById('pera');
+            pera.addEventListener('mouseover', function run(){console.log('Mouse Inside the peragraph')});
+            pera.addEventListener('mouseout', function run(){console.log('Mouse outside the peragraph')});
+
+        //Access pressed keyword keys by using 'keyup', 'keydown' event listner
+            document.addEventListener('keydown', function(e){
+                console.log(e.key);
+            })
+
+        //audio play() method
+            //html code
+                <audio src="./Audio_files/key_press.mp3" id="pressKeyAudio"></audio>
+                <audio src="./Audio_files/Apple_byte.mp3" id="appleByteAudio"></audio>
+            //script code
+                const pressKeyAudio = document.getElementById('pressKeyAudio');
+                const appleByteAudio = document.getElementById('appleByteAudio');
+                document.addEventListener('keyup', (e)=>{
+                        console.log(e.key);
+                        if(e.key === 'a'){
+                            appleByteAudio.play();
+                        }
+                        else{
+                            pressKeyAudio.play();
+                        }
+                })
+        */
+
+
+        /***************** page10 *****************/
+        /*
+        <div class="container">
+            Time now is <span id="id1"></span>
+        </div>
+        
+        //script tag content************ 
+        function greet(x, y) {
+           console.log("Hello Good Morning " + x + " " + y);
+        }
+  
+        //setTimeout : Allows us to run the function once after the interval of time
+            let a = setTimeout(greet, 5000, "Aman", "Take care");
+            //setTimeout(greet(),5000,"Aman", "Take care"); //This give errror, because of () these perenthisis 
+            //clearTimeout(a); //by this we cancelled the setTimeout
+  
+        //setInterval : Allows us to run the function repeatedly after the interval of time
+            //let b = setInterval(greet, 1000, "Naveen", "How are you");
+            //clearInterval(b);
+  
+        //Watch on website
+            function fun(){
+                let c = new Date();
+                id1.innerHTML = c;
+            }
+  
+            let d = setInterval(fun,1000);
+            //clearInterval(d);
+        */
+
+
+        /***************** page11 *****************/
+        /*
+        <div class="container">
+            The date and time is <span id="id1"></span>
+        </div>
+
+        //script tag content
+        let a = new Date();
+        console.log(a);
+
+        let b = new Date(0);
+        console.log(b);
+
+        let c = new Date("2022-12-26");
+        console.log(c);
+
+        let d = new Date(2025, 5, 1, 10, 10, 10, 10); //Date(year, month, date, hours, minutes, seconds, milliseconds)
+        console.log(d);
+
+        //some functions
+            let yt = d.getFullYear();
+            console.log("The year is " + yt);
+
+            let mt = d.getMonth();
+            console.log("The month is " + mt);
+
+            let dt = d.getDate();
+            console.log("The date is " + dt);
+
+            let hr = d.getHours();
+            console.log("The hour is " + hr);
+
+        //Set date mannually by using the function
+            d.setFullYear(2022);
+            d.setDate(15);
+            console.log(d);
+
+        // The d.toUTCString(), Convert a date to a string using the UTC standard 
+
+        //Access day nama from date()
+            const arr = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+            let day_name = arr[d.getDay()];
+            console.log(day_name);
+        
+        //date function
+            function fun() {
+                id1.innerHTML = new Date();
+            }
+            setInterval(fun,1000);
+        */
+
+
+        /***************** page12 *****************/
+        /*
+          
+        //Printing the Math Object
+            let m = Math;
+            console.log(m);
+
+        //Printing the constants from Math Object
+            console.log("The value of Math.E is ", Math.E);
+            console.log("The value of Math.PI is ", Math.PI);
+            console.log("The value of Math.LN2 is ", Math.LN2);
+            console.log("The value of Math.SQRT1_2 is ", Math.SQRT1_2);
+            console.log("The value of Math.LOG2E is ", Math.LOG2E);
+
+        //Printing the Functions from Math Objects
+            let a = 34.64534;
+            let b = 78;
+
+            console.log("The value of a and b is " + a + ", " + b);
+            console.log("The value of a and b in round figure is " + Math.round(a) + ", " + Math.round(b));
+            console.log("3 raised to the power of 2 is "+ Math.pow(3,2));
+            console.log("The square root of 36 is "+ Math.sqrt(36));
+
+        // Ceil and floor
+            console.log("5.8 rounded up to nearest integer is "+ Math.ceil(5.8));
+            console.log("5.8 rounded down to nearest integer is "+ Math.floor(5.8));
+
+        //absolute function , always return +ve value
+            console.log("Absolute value of 5.66 is " + Math.abs(5.66));
+            console.log("Absolute value of -5.66 is " + Math.abs(-5.66));
+
+        //Trigonometric functions
+            console.log("The value of sin(pi/2) is " + Math.sin(Math.PI/2)); 
+
+        //Min and Max functions
+            console.log("Minimum value of 4, 5, 6 is " + Math.min(4, 5, 6));
+            console.log("Minimum value of 4, 5, 6 is " + Math.max(4, 5, 6));
+
+        //Celsius to Fahrenheit, { fer = cel*(9/5) + 32 }
+            <p><input id="c" onkeyup="convert('C')"> degrees Celsius</p>
+            <p><input id="f" onkeyup="convert('F')"> degrees Fahrenheit</p> 
+            //script tag content
+                function convert(degree) {
+                    var x;
+                    if(degree == "C"){
+                        x = document.getElementById("c").value * 9 / 5 + 32;
+                        document.getElementById("f").value = Math.round(x);
+                    } 
+                    else{
+                        x = (document.getElementById("f").value -32) * 5 / 9;
+                        document.getElementById("c").value = Math.round(x);
+                    }
+                }
+
+
+        //Generating a random number
+            //number between 0 and 1
+                let r = Math.random();
+                console.log("The random number between 0 and 1 is " + r);
+        
+            //number between 1(included) and 100(not included)
+                let a1 = 1;
+                let b1 = 100;
+                let R = a1 + (b1-a1)*Math.random();
+                console.log("The random number between 1 and 100 is " + R);  
+
+
+        */
+
+
+        /***************** page13 *****************/
+        /*
+            let obj = {
+                name: "aman",
+                channel: "code with aman",
+                friend: "Taanish Rawat",
+                food: "Bhindi",
+            }
+            console.log(obj);
+
+        //convert object to string
+            let a = JSON.stringify(obj);
+            console.log(a);
+        
+            a = a.replace('aman', 'king');
+            console.log(a);
+
+        //convert string to object
+            let b = JSON.parse(a);
+            console.log(b); 
+
+
+        */
+
+
+        /***************** page14 *****************/
+        /*
+            //To print the frequency of latters in sentances.
+                // const latterCount = (pharase)=>{
+                //     let obj = {};
+                //     for(i of pharase){
+                //             if(i in obj){
+                //                 obj[i] = obj[i] + 1;
+                //             }
+                //             else{
+                //                 obj[i] = 1;
+                //             }
+                //     }
+                //     return obj;
+                // }
+                // let pharase  = "My name is aman swami.";
+                // console.log(latterCount(pharase));
+
+            //To print the frequency of word in sentances.
+                // const wordCount = (pharase)=>{
+                //     let obj = {};
+                //     for(i of pharase){
+                //         if(i in obj){
+                //             obj[i] = obj[i] + 1;
+                //         }
+                //         else{
+                //             obj[i] = 1;
+                //         }
+                //     }
+                //     return obj;
+                // }
+                // let pharase  = "lol what lol";
+                // pharase = pharase.split(" ");   // pharase = ['lol', 'what', 'lol']
+                // console.log(wordCount(pharase));
+
+            //To print the frequency of word in sentances.
+                // const wordCount = (pharase)=>{
+                //     pharase = pharase.split(" "); // pharase = ['lol', 'what', 'lol']
+                //     return latterCount(pharase); 
+                // }
+                // let pharase  = "lol what lol";
+                // console.log(wordCount(pharase));
+        
+        */
+
+
+        /***************** page15 *****************/
+        /* 
+        "our promises"***********
+            const promise = new Promise((resolve, reject)=>{
+                let flag = false;
+                setTimeout(()=>{
+                    flag?resolve("resolve code is run in then"):reject("reject code is run in catch")
+                }, 2000)
+            })
+
+            //first way of using promise by ".then()", ".catch()"
+                // promise.then((a)=>{
+                //     console.log(a)
+                // }).catch((b)=>{
+                //         console.log(b)
+                //     })
+            //second way of using promise by using "async", "await"
+                let asynFun = async()=>{
+                    try {
+                        let res = await promise
+                        console.log(res);
+                    } 
+                    catch(error){
+                        console.log(error)
+                    }
+                }
+                asynFun();
+        
+        "Api promises"***************
+            //first way of using promise by ".then()", ".catch()"
+                fetch('url').then((res)=>{return res.json()}).then((json)=>{console.log(json)});
+
+            //second way of using promise by using "async", "await"
+                let asynFun = async()=>{
+                    try {
+                        let res = await fetch('url');
+                        let json = await res.json();
+                        console.log(json);
+                    } 
+                    catch(error){
+                        console.log(error)
+                    }
+                }
+                asynFun();
+
+        */
+
+
+        /***************** page16 *****************/
+        /*
+        //concepts of classes in javascritps**************************
+            class car{
+                constructor(name, color, speed){
+                    this.name = name;
+                    this.color = color;
+                    this.topSpeed = speed;
+                    this.currentSpeed = 0;
+                }
+                drive(){
+                    this.currentSpeed += 10;
+                }
+                break(){
+                    this.currentSpeed -= 10;
+                }
+                stop(){
+                    this.currentSpeed  = 0;
+                }
+            }
+
+            let bmw = new car("bmw","light blue", 200);
+            console.log(bmw.name)
+            console.log(bmw.color)
+            console.log(bmw.topSpeed)
+            console.log(bmw.currentSpeed)
+            bmw.drive();
+            bmw.drive();
+            bmw.break();
+            bmw.stop();
+
+
+        //My push method**************************
+            Array.prototype.myPush = function(item){
+                this[this.length] = item;
+                return this;
+            }
+
+            const fruits = ['mango','banana', 'apple', 'kiwi']
+            console.log(fruits);
+            fruits.myPush('strabery');
+            fruits.myPush('orange');
+            fruits.myPush('pea');
+            console.log(fruits);
+        
+        */
+
+
+
+    </script>
+</body>
+
+</html>

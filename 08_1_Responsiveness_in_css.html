@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsiveness in css</title>
+</head>
+<body>
+    <!-- 
+        1. syntax of media query:-
+        @media media-type and (media-feature-rule){
+            /*css rule go here*/
+        }
+        mediatype:- all, print, screen, speech.
+
+        
+        2. 
+        @media (orientation: landscape){
+            body{
+                color:blue;
+            }
+        }
+
+        //This is case of "and"
+        @media screen and (max-width:600px) and (orientation: landscape){
+            body{
+                color:blue;
+            }
+        }
+
+        //This is case of "or"
+        @media screen and (max-width:600px), screen and (orientation:landscape){
+            body{
+                color: blue;
+            }
+        }
+        
+
+        3.
+        smartphone:-
+        @media screen and (max-width: 767px){
+            body{
+                color:red;
+            }
+        }
+
+        Tablet:-
+        @media screen and (min-width:768px) and max-width:1023px{
+            body{
+                color:green;
+            }
+        }
+
+        Desktop:-
+        @media screen and (min-width:1024px){
+            body{
+                color:blue;
+            }
+        }
+     -->
+</body>
+</html>

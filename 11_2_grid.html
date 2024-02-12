@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uses of Grid in webpages</title>
+    <style>
+        .container{
+            display: grid;
+            /*grid-template-columns: 400px 400px 400px ;*/                  /*by this we create no. of columns*/  
+            /* grid-template-columns: 1fr 1fr 1fr ; */                      /*by this we create no. of columns*/ 
+            /* grid-template-columns: repeat(3,400px) ; */                  /*by this we create no. of columns*/ 
+            grid-template-columns: repeat(auto-fill,minmax(400px, 1fr));    /*by this we create no. of columns*/ 
+            /*grid-template-rows: 400px 400px 400px;*/                      /*by this we create no. of rows*/
+            grid-gap: 10px;                                                 /* by this we create between boxes*/
+            /*grid-auto-rows: 200px;*/                                      /*by this we menage height of boxes*/ 
+            grid-auto-rows: minmax(200px,auto);                             /*by this we menage height of boxes*/
+            /*grid-auto-columns: 300px;*/                                   /*by this we menage width of boxes*/
+            grid-auto-columns: minmax(50px,auto);                           /*by this we menage width of boxes*/
+
+        }
+        .item, .nested{
+            background-color: greenyellow;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #item-2{
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 4;
+        }
+        .item-container{
+            display: grid;
+            grid-template-columns: 100px 100px;
+            grid-gap: 10px;
+            row-gap: 5px;
+            column-gap: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item item-container" id="item-1">
+            <div class="nested">Boxes inside box 1</div>
+            <div class="nested">Boxes inside box 2</div>
+            <div class="nested">Boxes inside box 3</div>
+        </div>
+        <div class="item" id="item-2">Boxes 2</div>
+        <div class="item" id="item-3">Boxes 3</div>
+        <div class="item" id="item-4">Boxes 4</div>
+        <div class="item" id="item-5">Boxes 5</div>
+    </div>
+</body>
+</html>

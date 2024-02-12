@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      /*row first css*/
+      .row-1-container{
+         display: flex;
+         width: 100%;
+         height: 230px;
+      }
+      
+      .row-1-container>div{
+         background: chocolate;
+         height: 201px;
+         width: 344px;
+         margin: 7px 2px 0px 5px;
+         border-radius: 6px;
+         color: white;
+         font-weight: bold;
+         font-size: 34px;
+         padding: 14px;
+      }
+      
+      /*row second css*/
+      .row-2-container{
+         display: flex;
+      }
+      .row-2-container>div{
+         background: chocolate;
+         height: 34px;
+         width: 258px;
+         margin: 11px 0px 0px 6px;
+         border-radius: 6px;
+         color: white;
+         font-weight: bold;
+         font-size: 32px;
+         padding: 10px;
+      }
+
+      /*row Third css*/
+      .row-3-container{
+         display: flex;
+      }
+      .row-3-container>div{
+         background: chocolate;
+         height: 34px;
+         width: 201px;
+         margin: 8px 0px 0px 6px;
+         border-radius: 6px;
+         color: white;
+         font-weight: bold;
+         font-size: 32px;
+         padding: 10px;
+      }
+
+   /*css on row-first of box1 */
+   .box1-first-r{
+      display: flex;
+   }
+   .box1-first-r > div{
+      background-color: white;
+      color: chocolate;
+      margin: 2px;
+      width: 108px;
+      height: 49px;
+      border-radius: 9px;
+      padding: 1px;
+   }
+
+   /*css on row-second of box1 */
+   .box1-second-r{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .box1-second-r>div{
+      background-color: white;
+      color: chocolate;
+      margin: 2px;
+      width: 79px;
+      height: 49px;
+      border-radius: 9px;
+      padding: 1px;
+   }
+
+   /*css on row-third of box1 */
+   .box1-third-r{
+      display: flex;
+      flex-wrap: wrap;
+   }
+   .box1-third-r>div{
+      background-color: white;
+      color: chocolate;
+      margin: 2px;
+      width: 62px;
+      height: 49px;
+      border-radius: 9px;
+      padding: 1px;
+   }
+   </style>
+</head>
+
+<body>
+   <!-- row 1st -->
+   <div class="row-1-container">
+      <div>1
+         <!-- inside the box1 of row first -->
+         <!-- small first row -->
+         <div class="box1-first-r">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+         </div>
+         <div class="box1-second-r">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+         </div>
+         <div class="box1-third-r">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+         </div>
+      </div>
+      <!-- inside the box2 of row first -->
+      <div id="item-2">2</div>
+      <!-- inside the box3 of row first -->
+      <div id="item-3">3</div>
+   </div>
+
+   <!-- row 2 -->
+   <div class="row-2-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+   </div>
+   
+   <!-- row 3 -->
+   <div class="row-3-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+   </div>
+</body>
+</html>

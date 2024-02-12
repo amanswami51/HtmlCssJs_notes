@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>concept of lists</title>
+
+   <style>
+      ol{
+         list-style-type:none;/*none, decimal, upper-alpha, lower-alpha, upper-roman, lower-roman, decimal-leading-zero*/
+         list-style-position: outside;
+         background-color: lightblue;        
+      }
+      
+      /*
+
+      */
+      
+      #ulfirst{
+         list-style-type:none;   /*none, disc, circle, square*/
+         list-style-position: outside; /*inside*/
+         /* list-style-image: url('sqpurple.gif'); */       
+         background-color: lightgoldenrodyellow; 
+         /*list-style: square inside url("sqpurple.gif");*/  /*This is sorthand property*/
+      }
+
+      a{
+         text-decoration:none;
+      }
+
+   </style>
+</head>
+
+<body>
+   <!-- 
+      Types of lists
+      1. ordered list
+      2. unordered list
+      3. Description list
+   -->
+   
+   <!-- *****ordered list (ol)**** -->
+   <div>
+      <ol type="1" start="55">
+         <li><a href="#" target="_blank">Home</a></li>
+         <li><a href="#" target="_blank">contact us</a></li>
+         <li><a href="#" target="_blank">About us</a></li>
+         <li><a href="#" target="_blank">read</a></li>
+      </ol>
+   </div>
+
+   
+   <!-- *****un-ordered list (ul)**** -->
+   <div>
+      <ul type="square" id="ulfirst">
+         <li><a href="#" target="_blank">Home</a></li>
+         <li><a href="#" target="_blank">contact us</a></li>
+         <li><a href="#" target="_blank">About us</a></li>
+         <li><a href="#" target="_blank">read</a></li>
+      </ul>
+   </div>
+
+
+   <div>
+      <ul>
+         <li>Coffee</li>
+         <li>Tea</li>
+            <ul>
+               <li>Black tea</li>
+               <li>Green tea</li>
+            </ul>
+         <li>Milk</li>
+      </ul>
+   </div>
+   
+   
+   <!-- *****Description list (dl)***** -->
+   <div>
+      <dl>
+         <dt>Aman</dt> <!--Description term-->
+         <dd>2125688</dd> <!--Description data-->
+         <dd>B.Tech CSE</dd>
+         <dd>Third Semester</dd>
+         <dd>8 CGPA</dd>
+         <dt>Taanish</dt>
+         <dd>2125690</dd>
+         <dd>B.Tech ME</dd>
+         <dd>Third Semester</dd>
+         <dd>9.5 CGPA</dd>
+      </dl>
+   </div>
+
+</body>
+
+</html>

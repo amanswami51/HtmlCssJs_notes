@@ -1,0 +1,4 @@
+URL: Uniform resource locator
+web browser request pages from web servers by using a URL.
+A url is used to address a document on the web.
+web address syntax = {scheme://prefix.domain:port/path/filename} eg: https://www.w3schools.com/html/default.asp

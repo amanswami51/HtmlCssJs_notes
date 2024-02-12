@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All About CSS</title>
+    <style>
+        /*
+        */
+        body{
+            background-color: powderblue;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        h2{
+            color: white;
+            background-color: black;
+            text-align: center;
+        }
+        .p2{
+            font-size: 10px;
+            border: 3px solid red;
+            padding: 5px;   /*space inside the border*/
+            margin: 5px;   /*space outside the border*/
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</h1>
+    <h2>Hello, This is aman.</h2>
+    <img src="giphy.gif" alt="Mr.Bean photo" style="float:left;width: 100px; height:100px;margin:0px 10px 0px 5px;">
+    <p>This is Peragraph 1, This is Peragraph 1</p>
+    <p class="p2">This is Peragraph 2</p>
+     <hr>
+     
+</body>
+</html>
+ <!-- index  
+    page-1. introduction 
+    page-2. selector of css
+    page-3. properties of CSS:- 
+        A. color
+        B. background
+        C. font
+        D. border
+        E. box-size
+        F. padding
+        G. margin
+        H. css for image
+        I. shorthand property
+        J. content property in css
+        k. display
+        L. position, Z-index
+        M. visibility
+        N. float
+        O. outline
+        P. vertical alignment
+        Q. link
+        R. icon
+        S. max-width
+        T. overflow
+        U. filter:blur(5px)
+    page-4. Box Model
+    page-5. Units in CSS
+    page-6. Example of Z-index
+    page-7. pseudo-class selector
+    page-8. pseudo-element selector
+    page. Note
+    last-page: Apply CSS on website
+-->
+    
+<!-- ***************************************** -->
+<!-- page-1.
+    <style>
+        selector{
+            property : value;
+        }
+    </style>
+-->
+
+<!-- ******************************************* -->
+<!-- page-2.
+    selectors                       example
+    1. Type selector                tag{}
+    2. Combined selector            tag1,tag2,tag3{}
+    3. Universal selector           *{}
+    4. class selector               .class-name{}
+    5. id selector                  #id-name{}
+    6. Attribute selector           a[href="www.example.com"]{}
+    7. pseudo-class selector        tag:hover{} , tag:visited{} , tag:nth-child(even){} , a:link{}, a:visited{}, a:hover{}, a:active{}, p:first-child  
+    8. pseudo-element selector      tag::first-line{} , tag::first-letter, tag::before{} , tag::after{content: "";/*This create empty space when content is not filled*/}
+    9. child combinator             article>p{} :- In this example only those <p> tag select which is direct child of <article> tag.
+    10. descendant combinator       article p{} :- In this example we select all <p> tag which is child of <article> tag.
+    11. adjacent sibling combinator article+p{} :- We select <p> tag which is just after <article> tag. In this case <p> tag not the child of <article> tag.
+    12. general sibling combinator  article~p{} :- We select all <p> tag which is after <article> tag. In this case <p> tag not the child of <article> tag.
+
+
+    example
+    <article>
+        <h1>Heading</h1>
+        <p>This is first p which is dirct child of article</p> //select in case of 9. //select in case of 10.
+        <span>Lorem ipsum dolor sit amet.</span>
+        <div>
+            <p>This is second p not direct child of article </p>    //select in case of 10.
+            <p>This is Third p not direct child of article </p>     //select in case of 10.
+        </div>
+    </article>
+    <p>first p after article</p> //select in case of 11.  //select in case of 12
+    <p>second p after article</p>                         //select in case of 12
+    <span>hello this is aman</span>
+    <p>third p after article</p>                          //select in case of 12
+
+                
+-->
+
+
+<!-- ******************************************* -->
+<!-- page-3. properties of CSS -->
+<!-- 
+    A. color:-
+    color:red;
+    color:red !important;
+    color:rgb(223,160,54);
+    color:#ffffff;
+    background-color:red;
+    border-color:red;
+
+    B. background:-
+    background-image:url("image.jpg");
+    background-repeat: repeat-x;
+    background-position: left top; //bottom,left,right
+    background-position: bottom 50px right 100px;
+    background-attachment: scroll;
+    background-size: 400px;
+    opacity:0.6;
+    
+    C. Font:-
+    font-family: "Times New Roman", Times, serif; /*sans-serif, serif, monospace, fantasy, cursive*/
+    font-style: italic; /*normal, italic, oblique*/
+    font-size: smaller; /*30px*/ /*1em=16px*/
+    font-weight: bold;
+    font-variant: small-caps;
+    line-height: 4; //space between lines
+    text-indent: 100px; //space before line
+    word-spacing: 4; //space between words
+    latter-spacing: 1px; //space between letters
+    text-decoration: underline red wavy 5px; /*color, style, width are optional values of text-decoration*/ /*underline, overline, line-through, */
+    text-transform: uppercase; /*lowercase,capitalize*/
+    text-align: center; /* right, left, justify */ 
+    text-align-last: right; /*specifies how to align the last line of a text.*/
+    direction: rtl; unicode-bidi: bidi-override; /*used to change the text direction*/
+    white-space: nowrap;
+    text-shadow: 1px 1px 2px black; /* (offset-x | offset-y | blur-radius | color)*/
+    box-shadow: 10px 13px 5px green; /*(offset-x | offset-y | blur-radius | color)*/
+    box-shadow: 10px 13px 10px 15px green; /*(offset-x | offset-y | blur-radius | spread-radius | color)*/
+    box-shadow: inset 3px 5x green;  /*inset:- how much shadow insert inside the box */
+    
+    D. border:-
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    border-top-radius: 4px;
+    border-top: 2px solid red;
+    
+    
+    E. box-size:-
+    //If we want to that width not change by padding so, we use a property border-box.
+    box-sizing: border-box;  //this mean we only give size to border-box.
+    box-sizing: content-box; //this mean we only give size to content-box.
+
+    //Total element width = width + left padding + right padding + left border + right border + left margin + right margin
+    //Total element height = height + top padding + bottom padding + top border + bottom border + top margin + bottom margin
+    
+    
+    F. padding:- spacing between content and border
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+
+    G. margin :- outside spacing from the border
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+    margin:auto; /*To horizontally center a block element (like <div>), use this property*/ /*we also set image in center by using this property, first it make display:block;*/
+
+
+    H. css for image
+    clip-path: inset(2% 2% 2% 2%);
+    width: 200px;
+    height: 200px;
+    filter: invert(100%); 
+    opacity: 0.5; //value from 0-1  //background: rgba(76, 175, 80, 0.1); this is also used to giving opacity
+    
+
+    I. shorthand property:-
+    background :  background-color  background-image  background-repeat  background-position ;
+    font :  font-style  font-weight  font-size  line-height  font-family; 
+    border: 1px solid black;    
+    margin: margin-top margin-right margin-bottom margin-left;
+    padding: padding-top padding-right padding-bottom padding-left;
+    
+    
+    J. content property in css
+    The content property is use with the ::before and ::after psudo-elements, to insert generated content.
+    It is used to paste the content before and after the tags.
+    Demonstrate with the help of code:-
+    a::after{
+         content: " ("attr(href)") ";
+    }
+    <p><a href="www.google.com" target="_blank">link first</a></p>
+    <p><a href="www.youtube.com" target="_blank">link second</a></p>
+
+    /*If an element is taller than the element containing it, and it is floated, it will overflow outside of its container. we can solve this by content property */
+    .container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+
+    k. display
+    display: inline; /*take only required space. and width, height property not work properly*/
+    display: block; /*take space of complete line. and width, height work properly*/
+    display: inline-block; /*take only required space. and width, height property work properly*/
+    display: flex;
+    display: grid;
+    display: none; /*It hide the box but space not reserved.*/ /*while in case of (visibility: hidden;) it hide the box but space reserved. */
+
+
+    L. position
+    /* position: (static(bydefault), absolute, relative, fixed, sticky); */
+    /* If we want to use "top,right,bottom,left, Z-index" properties then set all above position property except static. */
+    /* absolute(top,left,bottom,right):- position change w.r.t. container box but it no leave any gap at its normal position 
+        #box3{
+            position: absolute;
+            top: 34px;
+            left: 34px;
+        }
+    */
+    /* relative(top,left,bottom,right):- relative to its normal position, but it leave the gap at its normal position.
+        #box3{
+            position: relative;
+            top: 34px;
+            left: 34px;
+            Z-index: 26; /*value of z index refers that, which box is visible above to the another box. Box visible above if value of z-index of that box is more than as compare to another box.  */
+        }
+    */
+    /* fixed(top,left,bottom,right):- when we scroll then position not change, but it no leave any gap at its normal position. position the element relative to the browser window. 
+        #box3{
+            position: fixed;
+            top: 81px;
+            left: 186px;
+        }
+    */
+    /* sticky(top,left):- when we scroll then position not change, but it leave the gap at its normal position. In the case of 'sticky' only 'top,left' property works when box arrange in columns. only 'top' property work when box arrange in rows.
+        #box3{
+            position: sticky;
+            top: 81px;
+        }
+    */
+
+
+    M. visibility
+    /*visibility: (visible(default), hidden)*/
+    /* hidden:- it hide the box but space reserved. While in case of (display: none;) it hide the box but space not reserved.
+        #box2{
+            visibility: hidden;
+            background-color: red;
+        }
+    */
+
+
+    N. float property :- generally, float property can be used to wrap text around images in its container. It is property of box not container.
+    /*float: (left, right, none, inherit)
+    img{
+        float: right;
+    }
+    */
+    /*clear: for remove float effect on bottom content then we use clear property. below content overlap with floating content so we use clear property for below content.
+    div1 {
+        float: left;
+        padding: 10px;
+        border:1px solid red;
+    }
+    div2{
+        clear: left;    /*'none', 'left', 'right', 'both', 'inherit'*/
+        padding: 10px;
+        border:1px solid green;
+    }
+
+    note:- more learn about float in 'tut_9_1_float_property_css'.
+    */
+
+    O. outline property
+    An outline is a line drawn outside the element's border.
+    /*outline-style : dotted; (dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden)*/
+    outline: 1px solid black;  /*outline: outline-width  outline-style  outline-color; */
+    outline-offset: 5px; /*adds space between an outline and the border*/
+
+    P. vertical alignment
+    <p>My name is aman <span>TM</span> swami.</p>
+    span{
+         vertical-align: super; /*baseline, text-top, text-bottom, sub*/
+         font-size: 5px;
+        }
+
+    Q. link
+    /* unvisited link */
+        a:link {color: red;}
+    /* visited link */
+        a:visited {color: green;}
+    /* mouse over link */
+        a:hover {color: hotpink;}
+    /* selected link */
+        a:active {color: blue;}
+
+    R. icon
+    /*Font Awesome Icons
+        <head><script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script></head>
+        <body>
+            <i class="fas fa-cloud"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-car"></i>
+            <i class="fas fa-file"></i>
+            <i class="fas fa-bars"></i>
+        </body>
+    */
+    /*Bootstrap Icons
+        <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
+        <body>
+            <i class="glyphicon glyphicon-cloud"></i>
+            <i class="glyphicon glyphicon-remove"></i>
+            <i class="glyphicon glyphicon-user"></i>
+            <i class="glyphicon glyphicon-envelope"></i>
+            <i class="glyphicon glyphicon-thumbs-up"></i>
+        </body>
+    */
+    /*Google Icons
+        <head><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></head>
+        <body>
+            <i class="material-icons">cloud</i>
+            <i class="material-icons">favorite</i>
+            <i class="material-icons">attachment</i>
+            <i class="material-icons">computer</i>
+            <i class="material-icons">traffic</i>
+        </body>
+    */
+
+    S. max-width
+        width: 500px;
+        margin:auto;
+        border:1px solid red;
+
+        max-width: 500px; //this is better options for resposiveness 
+        margin:auto;
+        border:1px solid red;
+
+        note: drag window to see difference
+    
+    
+    T. overflow :- property only works for block elements with a specified height. This is property of container.
+        overflow:visible; /*Default, The content renders outside the element's box*/
+        overflow:hidden;  /*The overflow is clipped, and the rest of the content will be invisible*/
+        overflow:scroll;  /*The overflow is clipped, and a scrollbar is added to see the rest of the content*/
+        overflow:auto;    /*Similar to scroll, but it adds scrollbars only when necessary*/
+        overflow-x: hidden; /* Hide horizontal scrollbar */  /*overflow-x specifies what to do with the left/right edges of the content.*/
+        overflow-y: scroll; /* Add vertical scrollbar    */  /*overflow-y specifies what to do with the top/bottom edges of the content.*/
+
+
+        
+-->
+
+
+<!-- ******************************************* -->
+ <!--page-4. Box Model
+    P: padding, B: border, M: margin, T: top, R: right, B: bottom, L: left
+                 _______________________________________
+                |                  MT                   |
+                |     _____________________________     |
+                |    |             BT              |    |
+                |    |     ___________________     |    |
+                |    |    |        PT         |    |    |
+                |    |    |     _________     |    |    |
+                |    |    |    | content |    |    |    |
+                | ML | BL | PL | area    | PR | BR | MR |
+                |    |    |    |_________|    |    |    |
+                |    |    |        PB         |    |    |
+                |    |    |___________________|    |    |
+                |    |             BB              |    |
+                |    |_____________________________|    |
+                |                  MB                   |
+                |_______________________________________|              
+                     
+
+-->
+
+
+<!-- ******************************************* -->
+<!--page-5. 
+    Units in CSS
+    Relative:- %, em, rem, vh, vmin, vw, vmax. These are depends on other unit,screen,parent-tag.
+    Absolute:- cm, mm, px, pt, pc. These not depend other tag.
+
+    cm:- 1cm = (96px/2.54)
+    mm:- millimeters
+    in:- inches(1in = 96px = 2.54cm)
+    px:- pixels(1px = 1/96th of 1in)
+    pt:- points(1pt = 1/72 of 1in)
+    pc:- picas(1pc = 12pt)
+
+    %:- relative to the parent element.
+    em:- relative to the font-size of the element.
+    rem:- font size of the root element.
+    vw:- relative to 1% of the width of viewport.
+    vh:- relative to 1% of the height of the viewport.
+    vmin:- 1% of the viewport's smaller dimension.
+    vmax:- 1% of the viewport's(browser window) larger dimension.
+ -->
+
+ 
+ 
+ <!-- ******************************************* -->
+ <!-- page-6. 
+    Example of Z-index
+    <style>
+      .container{
+         border: 2px solid red;
+         width: 100%;
+         height: 600px;
+        }
+      .box{
+         display: inline-block;
+         border: 1px solid blue;
+         width: 150px;
+         height: 150px;
+         margin: 10px;
+         padding: 10px;
+        }
+      #box2{
+         position: relative;
+         z-index: 26;
+         left: 10px;
+         top: 10px;
+         background-color: greenyellow;
+        }
+      
+      #box3{
+         position: relative;
+         z-index: 28;
+         background-color: orange;
+        }
+   </style>
+
+   <body>
+        <div class="container">
+            <div id="box1" class="box">1</div>
+            <div id="box2" class="box">2</div>
+            <div id="box3" class="box">3</div>
+            <div id="box4" class="box">4</div>
+        </div>
+    </body>
+-->
+ 
+
+<!-- ******************************************* -->
+<!-- page-7. pseudo-class selector -->
+<!-- 
+    1).
+    p {
+        display: none;
+        background-color: yellow;
+        padding: 20px;
+    }
+    div:hover p {
+        display: block;
+    }
+    <div>Hover over this div element to show the p element
+        <p>Tada! Here I am!</p>
+    </div>
+
+    2).
+    p:first-child {
+        color: blue;
+    } 
+
+    <p>This is some text.</p>   //blue color apply
+    <p>This is some text.</p>
+    <div>
+        <p>This is some text.</p>   //blue color apply
+        <p>This is some text.</p>
+    </div>
+
+    3).
+    q:lang(no) {
+        quotes: "~" "+";  
+    }
+    <p>Some text <q lang="no">A quote in a paragraph</q> Some text.</p> //final result:- Some text ~A quote in a paragraph+ Some text.
+
+    4).
+    input:focus {
+        background-color: yellow;
+    }
+    <form action="/action_page.php" method="get">
+        First name: <input type="text" name="fname"><br><br>
+    </form>
+
+    5).
+    tag:hover:not(.class-name){
+        property:value;
+    }
+ -->
+ 
+<!-- ******************************************* -->
+<!-- page-8. pseudo-element selector -->
+<!-- 
+    1).
+    ::marker { 
+        color: red;
+        font-size: 23px;
+    }
+    <ul>
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ol>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+    </ol>
+
+    2).
+    *{
+	    color:white;
+    }
+    ::selection {
+        color: red;
+        background: black;
+    }   
+    <h1>Select some text on this page:</h1>
+    <p>This is a paragraph.</p>
+    <div>This is some text in a div element.</div>
+
+ -->
+ 
+<!-- ******************************************* -->
+<!-- page- Notes -->
+<!-- 
+
+ -->
+
+
+<!-- ******************************************* -->
+<!--last-page-->
+<!-- Apply CSS on website -->
+<!-- 
+    *{
+        box-sizing: border-box; //Jo width di h vo hi rhe to ham border-box use kr skte h
+    }
+
+    body{
+        margin: 0px;
+        width: 79pc;
+    }
+    
+    header{
+        padding: 10px;
+        background-image: url("header-imag.webp");
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+    }
+
+    header h1{
+        animation: bouncing 2s ease 2s infinite alternate both;
+        position: relative;
+        font-size: 40px;
+        color: red;
+        top: 0px;
+    }
+    @keyframes bouncing{
+        0%{
+            left:0;
+            box-shadow: 0 0 5px rgba(97,238,4,0.5);
+        }
+        100%{
+            left: 700px;
+            box-shadow: 0 50px 50px rgb(252,3,3);
+        }
+    }
+
+    header img{
+        position: relative;
+        left:60pc;
+        width:12pc;
+        height:12pc;
+        border-radius:5px;
+        clip-path: circle(50% at 50% 50%);
+    }
+
+    section h1{
+        transition: color 2s;
+    }
+    section h1:hover{
+        color: red;
+    }
+
+    nav{
+        background-color:#333;  //3
+        overflow: hidden;       //6
+        position:sticky;        //7
+        top: 0;                 //8
+    }
+    nav a{
+        text-decoration: none;  //1
+        color:white;            //2
+        padding:20px;           //4
+        float:left;             //5
+    }
+
+    footer{
+        background-color: #333; //3
+        overflow: hidden;       //6
+    }
+    footer a{
+        text-decoration:none; //1
+        color:white;          //2
+        padding:20px;         //4
+        float:left;           //5
+    }
+    nav a:hover, footer a:hover{
+        background-color: rgb(235, 227, 132);
+        color:red;
+        cursor: pointer;
+    }
+ -->
