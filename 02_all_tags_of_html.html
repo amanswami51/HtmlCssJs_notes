@@ -6,128 +6,108 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>all tags of html</title>
-   <link rel="icon" type="image/x-icon" href="apple-touch-icon.png">  <!-- A favicon is a small image, which is visible on tab-->
+   <link rel="icon" type="image/x-icon" href="apple-touch-icon.png">
 
-   <!-- Internal css -->
-   <style>
-
-      /*use of element selector of css*/
-      h6 {
-         text-decoration: underline;
+   <script>
+      function myFunction() {
+         alert("You go to on desire position on same page");
       }
-
-      /*use of id in css selector*/
-      #id1 {
-         color: red;
-      }
-
-      /*use of class in css selector*/
-      .class1 {
-         background-color: yellow;
-      }
-
-      /*Properties Work only on hovering (refer eq.3)*/
-      a:hover{
-         text-decoration: none;
-         color: red;
-         background-color: yellow;
-      }
-      a{
-         color: white;
-         background-color: red;
-         text-decoration: none;
-         display: inline-block;
-         padding: 12px;
-         margin: 0px;
-         text-align: center;
-         border-radius: 12px;
-      }
-
-      /*background-image,refer eq.4*/
-      address{
-         background-image:url('giphy.gif'); 
-         background-repeat: no-repeat;
-         background-size: cover; /*background image cover the entire element*/
-         /*background-attachment: fixed; /*Also, to make sure the entire element is always covered*/
-         /*background-size: 100% 100%;*/  /*If you want the background image to stretch to fit the entire element*/
-         width: 200px;
-         height: 200px;
-      }
-
-      /*27. Multiple classes*/
-      .city{
-         color: white;
-         background-color: red;
-         padding: 10px;
-         width: 30pc;
-      }
-      .main{
-         text-align: center;
-      }
-      
-      /* 28. id */
-      #myid{
-         background-color: blueviolet;
-         color: white;
-         padding: 10px;
-         width: 30pc;
-      }
-   </style>
-
+   </script>
 </head>
 
 <body>
-<!-- HTML = Hyper text markup Language, It is basically a standerd markup language for giving a static skeleton to web application and websites.  -->
+   <!-- HTML = Hyper text markup Language, It is basically a standerd markup language for giving a static skeleton to web application and websites.  -->
 
-   <!-- 1. heading tag from <h1></h1> to <h6></h6> -->
-   <!--     h1#id1.class1  :- This is shortcut -->
-   <h1 id="id1" class="class1">Hello,</h1> <!--class is use to make non-unique name of element-->
-   <h6 class="class1">This is aman swami.</h6>
+   <h1>1. heading tag (h1 to h6)</h1>
+   <h3 id="id1" class="class1">Hello,</h3>
+   <h5 class="class1">This is aman swami.</h5>
    <hr>
 
-   
-   <!-- 2. Peragraph tag -->
-   <p id="id2" title="This is title attribute" style="text-align :center;">I am an engineer. I am from suratgarh
-      rajasthan.</p>
-      <hr>
-      <!--  -->
+
+
+   <h1>2. Peragraph tag (p)</h1>
+   <p id="id2" title="This is title attribute">
+      I am an engineer. I am from suratgarh rajasthan.
+   </p>
+   <hr>
       
-      
-      <!-- 3. Hyper link, target= _self, _blank, _parent, _top  -->
-      <!-- _self - Default. Opens the document in the same window/tab as it was clicked
-         _blank - Opens the document in a new window or tab
-         _parent - Opens the document in the parent frame
-         _top - Opens the document in the full body of the window -->
-         <a href="https://www.google.com" target="_blank" title="Go to google website">google</a>
-   <p><a href="mailto:123ramramji456@gmail.com" title="send the email">Send email</a></p> <!--mailto: is use to send email -->
-   <a href="facebook.com" target="_blank" onclick="myFunction()">facebook</a> <!--refer equ. 30-->
+
+
+   <h1>3. Hyper link (a)</h1>
+   <a href="https://www.google.com" target="_blank" title="Go to google website">google</a> <br>
+   <a href="mailto:123ramramji456@gmail.com" title="send the email">Send email</a> <br> <!--mailto: is use to send email -->
+   <a href="facebook.com" target="_blank" onclick="myFunction()">facebook</a> <br> <!--refer equ. 30-->
    <!-- Add bookmark through a tag -->
    <a href="#book">Go to greeting</a> <!--If id in same page--> <!--If id not in same page then href="home.html#book"-->
+
+   <!-- value of target attribute  
+      _self - Default. Opens the document in the same window/tab as it was clicked
+      _blank - Opens the document in a new window or tab
+      _parent - Opens the document in the parent frame
+      _top - Opens the document in the full body of the window
+   --> 
    <hr>
 
    
-   <!-- 4. image tag -->
-   <!-- src,alt,height,width  :- These are attributes -->
+
+   <h1>4. Image tag (img)</h1>
+   <p>attributes are :- src, alt, height, width</p>
+   <img src="nature1.jpeg" alt="loading error" height="100px" width="100px">
+   <img src="nature2.jpeg" alt="Mr.Bean photo" style="width: 100px; height:100px;">
    <!-- To use an image as a link, just put the <img> tag inside the <a> tag -->
-      <img src="D:\photo\a1.jpg" alt="loading error" height="100px" width="100px">
-      <img src="giphy.gif" alt="Mr.Bean photo" style="width: 100px; height:100px;">
+   <!-- 
+      src="picture.jpg" //current folder ke ander h picture then use this
+      src="images/picture.jpg"  //current folder ke ander 'image folder' ke ander h picture then use this
+      src="../picture.jpg" //current folder ke bahar h picture then use this
+      src="/images/picture.jpg" //picture file is located in the images folder at the root of the current web
+   -->
+   <hr>
+
+
+
+   <h1>5. Image map element (map)</h1>
+   <p>Click in the image and then go to desire link</p>      
+   <img src="nature3.jpeg" alt="Workplace" usemap="#workmap" width="400" height="379">
+   <map name="workmap">
+      <area shape="rect" coords="220,1,390,190" alt="Computer" href="https://www.computerhope.com/jargon/l/laptop.htm" target="_blank">
+      <area shape="rect" coords="180,270,310,350" alt="Phone" href="https://www.techopedia.com/definition/2955/mobile-phone" target="_blank">
+      <area shape="circle" coords="107,80,55" alt="Cup of coffee" href="https://www.britannica.com/topic/coffee" target="_blank">
+   </map>
+   <!-- shape="rect" coords="left-top-left-top" -->
+   <!-- shape="circle" coords="left,top,radius" -->
+   <!-- shape="poly" coords="x1,y1,x2,y2,x3,y3..." -->
+   <hr>
+
+
+
+   <h1>6. picture element use in resposiveness (picture)</h1>
+   <picture>
+      <source media="(min-width: 650px)" srcset="nature2.jpeg">
+      <source media="(min-width: 465px)" srcset="nature3.jpeg">
+      <img src="nature1.jpeg" alt="loading..." style="width:auto;">
+   </picture>
+   <hr>
       
+
+
+   <h1>7. video tag (video)</h1>
+   <p>attributes are :- src, height, width, autoplay, controls, loop, muted, poster</p>
+   <video src="GwagonVideo.mp4" height="300px" width="300px" controls loop poster="GwagonPic.png"></video>
+   <hr>   
+   
+
+
+   <h1>8. Input tag (input)</h1>
+   <p>attributes are :- type, required, disabled, placeholder</p>
+   <input type="file" required placeholder="Enter your name">
+   <!-- values of type :- text,number,password,email,date,image,file,submit,reset,radio,checkbox -->
+   <hr>
       
-      <!-- 5. video tag, attributes=src,height,width,autoplay,controls,loop,muted,poster -->
-      <video src="C:\Users\123ra\Videos\mobile song\guru_nanak.mp4" height="100px" controls loop
-      poster="D:\photo\golden_temple_1.jpg"></video>
-      
-      
-      <!-- 6. input tag -->
-      <!-- type,required,disabled,placeholder  :- These are attributes -->
-      <!-- values of type :- text,number,password,email,date,image,file,submit,reset,radio,checkbox -->
-      <input type="file" required placeholder="Enter your name">
-      <hr>
-      
-      
-      <!-- 7. For bold :- <b></b> and <strong></strong>   -->
-      <b>
-         <p>Lorem ipsum dolor sit amet.</p>
+
+
+   <h1>9. bold tag (b, strong)</h1>
+   <b>
+      <p>Lorem ipsum dolor sit amet.</p>
    </b>
    <strong>
       <p>Lorem ipsum dolor sit amet.</p>
@@ -135,85 +115,101 @@
    <hr>
    
    
-   <!-- 8. For italic :- <i></i> and <em></em> -->
+
+   <h1>10. italic tag (i, em, cite)</h1>
    <i>
       <p>Lorem ipsum dolor sit amet consectetur.</p>
    </i>
    <em>
       <p>Lorem ipsum dolor sit amet consectetur.</p>
    </em>
+   <cite>Lorem ipsum dolor sit amet consectetur.</cite>
    <hr>
    
    
-   <!-- 9. For writing the power -->
+
+   <h1>11. power tag (sup) and sub tag (sub)</h1>
    <p> 10<sup>2</sup></p>
-   
-   
-   <!-- 10. For writing the base power -->
    <p> 10<sub>2</sub></p>
    <hr>
    
-   <!-- 11. pre -->
+
+
+   <h1>12. pre tag (pre)</h1>
    <pre title="This is title attribute">
       Hello,
-      This aman swami.
-I am from suratgarh rajasthan.
-I am an engineer.
-</pre>
-<hr>
+         This aman swami.
+               I am from suratgarh rajasthan.
+      I am an engineer.
+   </pre>
+   <hr>
 
-<!-- 12. br=break line, hr=horizontal rule , not closing tags -->
-<!-- 13. small tag-->
 
-<!-- 14. mark tag-->
-<p>Hi, This is <mark>aman</mark> swami.</p>
+   <h1>13. break line (br) and horizontal rule (hr)</h1>
+   <br>
+   <hr>
 
-<!-- 14. del tag, delete-->
-<p>Hi, This is <del>aman</del> swami.</p>
 
-<!-- 15. ins tag, inserted, it make under-line -->
-<p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
-<hr>
+   <h1>14. mark tag (mark)</h1>
+   <p>Hi, This is <mark>aman</mark> swami.</p>
+   <hr>
 
-   <!--16. blockquote tag = creat indent, cite represents the source of content  -->
+
+   <h1>15. delete tag (del)</h1>
+   <p>Hi, This is <del>aman</del> swami.</p>
+   <hr>
+
+
+   <h1>16. inserted tag (ins)</h1>
+   <p>My favorite color is <del>blue</del> <ins>red</ins>.</p>
+   <hr>
+
+
+   <h1>17. create indent tag (blockquote) </h1>
    <p>WWF works in nearly 100 countries : </p>
-   <blockquote cite="http://www.worldwildlife.org/who/index.html">
+   <blockquote>
       For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization,
       WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and
       deliver innovative solutions that protect communities, wildlife, and the places in which they live.
    </blockquote>
-   
-   <!-- 17. q tag, create inverted commas -->
-   <p>What is your name : <q>My name is aman</q>.</p>
-   
-   <!-- 18. <abbr> tag for Abbreviations, it make dashed-under-line -->
-      <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-      
-      <!-- 19. address tag, write content in italic-->
-      <address>
-         Written by John Doe.<br>
-         Visit us at:<br>
-         Example.com<br>
-         Box 564, Disneyland<br>
-         USA
-      </address>
-      
-      <!-- 20. cite tag, write content in italic -->
-      <p id="book"><cite>Hello</cite> This is aman.</p>
-      
-      <!-- 21. bdo tag = Bi-Directional Override, rtl = right-to-left -->
-      <bdo dir="rtl">This line will be written from right to left</bdo>
-      
-      
-      
-      <>
-      
-      
    <hr>
-   <!-- 22.
-      ******syntax of entities*******
-      &entity-name;
-   -->
+   
+
+   <h1>18. create inverted commas tag (q)</h1>
+   <p>What is your name : <q>My name is aman</q>.</p>
+   <hr>
+   
+
+   <h1>19. Make dashed-under-line tag (abbr)</h1>
+   <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+   <hr>
+      
+
+   <h1>20. address tag (address)</h1>
+   <address>
+      Written by John Doe.<br>
+      Visit us at:<br>
+      Example.com<br>
+      Box 564, Disneyland<br>
+      USA
+   </address>
+   <hr>
+
+   
+   <h1>21.  Bi-Directional Override tag (bdo) </h1>
+   <bdo dir="rtl">This line will be written from right to left</bdo> <!--rtl = right-to-left -->
+   <p>This line will be written from right to left</p>
+   <hr>
+      
+
+   <h1>22. iframe tag</h1>
+   <p>An html iframe is used to display a web page within a web page.</p>
+   <iframe src="05_web_form.html" name="open_iframe" title="web form" style="height: 20pc; width:70pc; border:2px dashed red;"></iframe>
+   <a href="03_Tables_in_WebD.html" target="open_iframe">Open this link in iframe</a>
+   <hr>
+
+   
+   <h1>23. syntax of entities (&entity-name;)</h1>
    &lt; <!--less than(<)-->
    &gt; <!--greater than(>)-->
    &amp; <!-- ampersand(&) -->
@@ -231,141 +227,34 @@ I am an engineer.
    &sum;
    &hearts;
    &spades;
-   <p style="font-size: 20px;">
-      &#128514; &#128516; &#128525; &#128151;
-   </p>
-
-   <hr><br><br>
-   
-   <!-- 23. -->
-   <h1 style="border: 2px solid Tomato;">Hello World</h1>
-   <p>Same as color name "Tomato":</p>
-   <h1 style="background-color:rgb(255, 99, 71);">rgb(255, 99, 71)</h1> <!-- r:red[0,255], g:green[0,255], b:blue[0,255] -->
-   <h1 style="background-color:#ff5612;">#ff0000</h1> <!--hexadecimal color(RR,GG,BB) range[0,9,a,f]-->
-   <h1 style="background-color:hsl(9, 100%, 64%);">hsl(9, 100%, 64%)</h1> <!--h:hue, s:saturation, l:lightness-->
-   <p>Same as color name "Tomato", but 50% transparent:</p>
-   <h1 style="background-color:rgba(255, 99, 71, 0.5);">rgba(255, 99, 71, 0.5)</h1> <!--a:alpha[0,1]-->
-   <h1 style="background-color:hsla(9, 100%, 64%, 0.5);">hsla(9, 100%, 64%, 0.5)</h1>
-   
-   
-   <!-- 24. (refer eq.4)-->
-   <h2>Image Maps</h2>
-   <p>Click on the computer, the phone, or the cup of coffee to go to a new page and read more about the topic:</p>
-   
-   <img src="image_map.jpeg" alt="Workplace" usemap="#workmap" width="400" height="379">
-   
-   <map name="workmap">
-      <area shape="rect" coords="220,1,390,190" alt="Computer" href="https://www.computerhope.com/jargon/l/laptop.htm" target="_blank">
-      <area shape="rect" coords="180,270,310,350" alt="Phone" href="https://www.techopedia.com/definition/2955/mobile-phone" target="_blank">
-      <area shape="circle" coords="107,80,55" alt="Cup of coffee" href="https://www.britannica.com/topic/coffee" target="_blank">
-   </map>
-   
-   <!-- shape="rect" coords="left-top-left-top" -->
-   <!-- shape="circle" coords="left,top,radius" -->
-   <!-- shape="poly" coords="x1,y1,x2,y2,x3,y3..." -->
-   
-   
+   &#128514; &#128516; &#128525; &#128151;
    <hr>
-   <!-- 25. picture element -->
-   <picture>
-      <source media="(min-width: 650px)" srcset="giphy.gif">
-      <source media="(min-width: 465px)" srcset="image_map.jpeg">
-      <img src="D:\photo\a1.jpg" style="width:auto;">
-   </picture>
    
    
-   <!-- 26. display values: block and inline -->
+   <h1>24. block tags and inline tags</h1>
+   <p>A block level element always starts on a new line and takes up the full width available.</p>
+   <p>
+      block tags are :- (div, address, article, aside, blockquote, canvas>, dd, dl, dt, fieldset, figcaption, figure, footer, form,
+      h1, h6, header, hr, li, main, nav, noscript, ol, p, pre, section, table, tfoot, ul, video)
+   </p>
+   <p>An inline element does not start on a new line and it only takes up as much width as necessary.</p>
+   <p>
+      inline tags are :- (span, a, abbr, acronym, b, bdo, big, br, button, cite, code, dfn, em, i, input, kbd, label, map, object, 
+      output, q, samp, script, select, small, strong, sub, sup, textarea, time, tt, var)
+   </p>
+   <hr>
+
+
+
+   <h1>25. About meta tags</h1>
    <!-- 
-      A block level element always starts on a new line and takes up the full width available.
-      The <div></div> element is a block-level and is often used as a container for other HTML elements.
-      eg:- <address>, <article>, <aside>, <blockquote>, <canvas>, <dd>, <div>, <dl>, <dt>, <fieldset>, <figcaption>, <figure>, <footer>, <form>,
-         <h1>-<h6>, <header>, <hr>, <li>, <main>, <nav>, <noscript>, <ol>, <p>, <pre>, <section>, <table>, <tfoot>, <ul>, <video>
-         -->
-         <!-- 
-      An inline element does not start on a new line and it only takes up as much width as necessary.
-      The <span></span> element is an inline container used to mark up a part of a text, or a part of a document.
-      eg:- <a>, <abbr>, <acronym>, <b>, <bdo>, <big>, <br>, <button>, <cite>, <code>, <dfn>, <em>, <i>, <input>, <kbd>, <label>, <map>, <object>, 
-         <output>, <q>, <samp>, <script>, <select>, <small>, <strong>, <sub>, <sup>, <textarea>, <time>, <tt>, <var>
-      --> 
-      <hr>
+   <meta charset="UTF-8"> //Define the character set 
+   <meta http-equiv="refresh" content="30"> //Refresh document every 30 seconds.
+   <meta name="keywords" content="HTML, CSS, JavaScript"> //Define keywords for search engines
+   <meta name="description" content="Free Web tutorials"> //Define a description of your web page
+   <meta name="author" content="John Doe"> //Define the author of a page
+   <meta name="viewport" content="width=device-width", initial-scale="1.0"> //Setting the viewport to make your website look good on all devices. 'initial-scale' this represents zoom level
+   -->
       
-      <!--27. Multiple classes -->
-      <!-- 
-         JavaScript can access elements with a specific class name with the
-         document.getElementsByClassName("class-name") method
-      -->
-      <p class="city main">London</p>
-      <p class="city">Paris</p>
-      <p class="city">Tokyo</p>
-      
-      
-      <!-- 28. id -->
-      <!-- 
-         JavaScript can access an element with a specified id by using the 
-         document.getElementById("id-name") method
-      -->
-      <p id="myid">Hi, This is Aman.</p><hr>
-      
-
-       <!-- 29. An html iframe is used to display a web page within a web page. -->
-       <!-- 
-         Syntax
-         <iframe src="url" title="description"> </iframe>
-      -->
-      <iframe src="tut_5_web_form.html" title="web form" style="height: 20pc; width:70pc; border:2px dashed red;" name="open_iframe"></iframe>
-      <a href="tut_3_Tables_in_WebD.html" target="open_iframe">Open this link in iframe</a>
-      <hr>
-      
-      <!-- 30. JavaScript -->
-      <!--  
-         <script></script> :- Defines a client-side script
-         <noscript></noscript> :- Defines an alternate content for users that do not support client-side scripts
-      -->
-      <p>What is your name?</p>
-      <p id="demo" title="This is title attribute">Aman Swami</p>
-      <script>
-         
-         /*(refer eq.3)*/
-         function myFunction() {
-            alert("You go to on desire position on same page");
-         }
-         
-         //JavaScript can change content.
-         document.getElementById("demo").innerHTML = "<h1>call me aman.</h1>";
-
-         //JavaScript can change styles.
-         document.getElementById("demo").style.color = "red";
-
-         //JavaScript can change attributes.
-         document.getElementById("demo").title = "title attribute change by JavaScript";
-         
-      </script>
-
-
-      <!-- 31. path -->
-      <!-- 
-         <img src="picture.jpg">
-         <img src="images/picture.jpg"> 
-         <img src="../picture.jpg">
-         <img src="/images/picture.jpg"> //picture file is located in the images folder at the root of the current web
-       -->
-       <img src="giphy.gif" alt="current folder ke ander h picture then use this" style="width: 135px;" >
-       <img src="image/a1.jpeg" alt="current folder ke ander 'image folder' ke ander h picture then use this" style="width: 110px;">
-       <img src="../aman1.jpg" alt="current folder ke bahar h picture then use this" style="width: 182px;">
-
-
-       <!-- 32. <meta> tag -->
-       <!-- 
-         <meta charset="UTF-8"> //Define the character set 
-         <meta http-equiv="refresh" content="30"> //Refresh document every 30 seconds.
-         <meta name="keywords" content="HTML, CSS, JavaScript"> //Define keywords for search engines
-         <meta name="description" content="Free Web tutorials"> //Define a description of your web page
-         <meta name="author" content="John Doe"> //Define the author of a page
-         <meta name="viewport" content="width=device-width", initial-scale="1.0"> //Setting the viewport to make your website look good on all devices. 'initial-scale' this represents zoom level
-        -->
-
-      
-      
-   </body>
-
+</body>
 </html>

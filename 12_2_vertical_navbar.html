@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>vertical navigation bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /*apply css on a, before button clicked*/
+        .nav a{
+            display: none;
+        }
+
+        /*apply css on #navid, after button clicked*/
+        .nav.click {
+            background-color: #333; /*3*/
+            overflow: hidden;         /*6*/
+            position: sticky;         /*7*/
+            top: 0px;                 /*8*/
+        }
+
+        /*apply css on a tag, after button clicked*/
+        .nav.click a {
+            display: block;
+            text-decoration: none;
+            color: #f2f2f2;       
+            padding: 14px 16px;    
+            float: none;            
+            text-align: left;
+            font-size: 17px;
+        }
+
+        /*Below all the settings of button*/
+        .button{  
+            cursor: pointer;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+        .bar1,
+        .bar2,
+        .bar3 {
+            width: 35px;
+            height: 5px;
+            background-color: orange;
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+        .change .bar1 {
+            transform: translate(0, 11px) rotate(-45deg);
+        }
+        .change .bar2 {
+            opacity: 0;
+        }
+        .change .bar3 {
+           transform: translate(0, -11px) rotate(45deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav" id="navid">
+        <a href="#home" class="active">Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <div class="button" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+    </div>
+
+    <h1>Click on right-top-most button.</h1>
+
+    
+    <script>
+        function myFunction(x){
+            //Change the configuration of button.
+            x.classList.toggle("change"); 
+
+            //show and hide the navbar
+            var x = document.getElementById("navid");
+            if (x.className === "nav") {
+                x.className += " click";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

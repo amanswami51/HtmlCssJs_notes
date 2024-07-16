@@ -5,39 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All About CSS</title>
-    <style>
-        /*
-        */
-        body{
-            background-color: powderblue;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-        h2{
-            color: white;
-            background-color: black;
-            text-align: center;
-        }
-        .p2{
-            font-size: 10px;
-            border: 3px solid red;
-            padding: 5px;   /*space inside the border*/
-            margin: 5px;   /*space outside the border*/
-            display: inline-block;
-        }
-
-    </style>
 </head>
 <body>
+    <hr><hr>
     <h1>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</h1>
-    <h2>Hello, This is aman.</h2>
-    <img src="giphy.gif" alt="Mr.Bean photo" style="float:left;width: 100px; height:100px;margin:0px 10px 0px 5px;">
-    <p>This is Peragraph 1, This is Peragraph 1</p>
-    <p class="p2">This is Peragraph 2</p>
-     <hr>
+    <hr><hr>
      
 </body>
 </html>
- <!-- index  
+<!-- index  
     page-1. introduction 
     page-2. selector of css
     page-3. properties of CSS:- 
@@ -67,7 +43,6 @@
     page-6. Example of Z-index
     page-7. pseudo-class selector
     page-8. pseudo-element selector
-    page. Note
     last-page: Apply CSS on website
 -->
     
@@ -122,10 +97,13 @@
     A. color:-
     color:red;
     color:red !important;
-    color:rgb(223,160,54);
-    color:#ffffff;
     background-color:red;
     border-color:red;
+    color:rgb(223,160,54); //r:red[0,255], g:green[0,255], b:blue[0,255]
+    color:#ffffff; //hexadecimal color(RR,GG,BB), range[0,9,a,f]
+    color:hsl(9, 100%, 64%); //h:hue, s:saturation, l:lightness
+    background-color:rgba(255, 99, 71, 0.5); //a:alpha[0,1] //use for transparent.
+    background-color:hsla(9, 100%, 64%, 0.5);
 
     B. background:-
     background-image:url("image.jpg");
@@ -232,55 +210,55 @@
 
 
     L. position
-    /* position: (static(bydefault), absolute, relative, fixed, sticky); */
-    /* If we want to use "top,right,bottom,left, Z-index" properties then set all above position property except static. */
-    /* absolute(top,left,bottom,right):- position change w.r.t. container box but it no leave any gap at its normal position 
+        position: (static(bydefault), absolute, relative, fixed, sticky); 
+        If we want to use "top,right,bottom,left, Z-index" properties then set all above position property except static. 
+        absolute(top,left,bottom,right):- position change w.r.t. container box but it no leave any gap at its normal position 
         #box3{
             position: absolute;
             top: 34px;
             left: 34px;
         }
-    */
-    /* relative(top,left,bottom,right):- relative to its normal position, but it leave the gap at its normal position.
+
+        relative(top,left,bottom,right):- relative to its normal position, but it leave the gap at its normal position.
         #box3{
             position: relative;
             top: 34px;
             left: 34px;
             Z-index: 26; /*value of z index refers that, which box is visible above to the another box. Box visible above if value of z-index of that box is more than as compare to another box.  */
         }
-    */
-    /* fixed(top,left,bottom,right):- when we scroll then position not change, but it no leave any gap at its normal position. position the element relative to the browser window. 
+    
+        fixed(top,left,bottom,right):- when we scroll then position not change, but it no leave any gap at its normal position. position the element relative to the browser window. 
         #box3{
             position: fixed;
             top: 81px;
             left: 186px;
         }
-    */
-    /* sticky(top,left):- when we scroll then position not change, but it leave the gap at its normal position. In the case of 'sticky' only 'top,left' property works when box arrange in columns. only 'top' property work when box arrange in rows.
+
+        sticky(top,left):- when we scroll then position not change, but it leave the gap at its normal position. In the case of 'sticky' only 'top,left' property works when box arrange in columns. only 'top' property work when box arrange in rows.
         #box3{
             position: sticky;
             top: 81px;
         }
-    */
+
 
 
     M. visibility
-    /*visibility: (visible(default), hidden)*/
-    /* hidden:- it hide the box but space reserved. While in case of (display: none;) it hide the box but space not reserved.
+    visibility: (visible(default), hidden)
+        hidden:- it hide the box but space reserved. While in case of (display: none;) it hide the box but space not reserved.
         #box2{
             visibility: hidden;
             background-color: red;
         }
-    */
+    
 
 
     N. float property :- generally, float property can be used to wrap text around images in its container. It is property of box not container.
-    /*float: (left, right, none, inherit)
+      float: (left, right, none, inherit)
     img{
         float: right;
     }
-    */
-    /*clear: for remove float effect on bottom content then we use clear property. below content overlap with floating content so we use clear property for below content.
+    
+      clear: for remove float effect on bottom content then we use clear property. below content overlap with floating content so we use clear property for below content.
     div1 {
         float: left;
         padding: 10px;
@@ -292,63 +270,59 @@
         border:1px solid green;
     }
 
-    note:- more learn about float in 'tut_9_1_float_property_css'.
-    */
 
     O. outline property
     An outline is a line drawn outside the element's border.
-    /*outline-style : dotted; (dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden)*/
-    outline: 1px solid black;  /*outline: outline-width  outline-style  outline-color; */
-    outline-offset: 5px; /*adds space between an outline and the border*/
+        outline-style : dotted; (dotted, dashed, solid, double, groove, ridge, inset, outset, none, hidden)
+        outline: 1px solid black;  /*outline: outline-width  outline-style  outline-color; 
+        outline-offset: 5px; /*adds space between an outline and the border
 
     P. vertical alignment
     <p>My name is aman <span>TM</span> swami.</p>
     span{
-         vertical-align: super; /*baseline, text-top, text-bottom, sub*/
+         vertical-align: super; /*baseline, text-top, text-bottom, sub
          font-size: 5px;
         }
 
     Q. link
-    /* unvisited link */
+    unvisited link
         a:link {color: red;}
-    /* visited link */
+    visited link 
         a:visited {color: green;}
-    /* mouse over link */
+    mouse over link 
         a:hover {color: hotpink;}
-    /* selected link */
+    selected link 
         a:active {color: blue;}
 
     R. icon
-    /*Font Awesome Icons
-        <head><script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script></head>
-        <body>
-            <i class="fas fa-cloud"></i>
-            <i class="fas fa-heart"></i>
-            <i class="fas fa-car"></i>
-            <i class="fas fa-file"></i>
-            <i class="fas fa-bars"></i>
-        </body>
-    */
-    /*Bootstrap Icons
-        <head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></head>
-        <body>
-            <i class="glyphicon glyphicon-cloud"></i>
-            <i class="glyphicon glyphicon-remove"></i>
-            <i class="glyphicon glyphicon-user"></i>
-            <i class="glyphicon glyphicon-envelope"></i>
-            <i class="glyphicon glyphicon-thumbs-up"></i>
-        </body>
-    */
-    /*Google Icons
-        <head><link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></head>
-        <body>
-            <i class="material-icons">cloud</i>
-            <i class="material-icons">favorite</i>
-            <i class="material-icons">attachment</i>
-            <i class="material-icons">computer</i>
-            <i class="material-icons">traffic</i>
-        </body>
-    */
+    Font Awesome Icons
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+      
+        <i class="fas fa-cloud"></i>
+        <i class="fas fa-heart"></i>
+        <i class="fas fa-car"></i>
+        <i class="fas fa-file"></i>
+        <i class="fas fa-bars"></i>
+    
+    
+    Bootstrap Icons
+        <link rel="stylesheet" href="add bootstramp links">
+
+        <i class="glyphicon glyphicon-cloud"></i>
+        <i class="glyphicon glyphicon-remove"></i>
+        <i class="glyphicon glyphicon-user"></i>
+        <i class="glyphicon glyphicon-envelope"></i>
+        <i class="glyphicon glyphicon-thumbs-up"></i>
+
+    Google Icons
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+       
+        <i class="material-icons">cloud</i>
+        <i class="material-icons">favorite</i>
+        <i class="material-icons">attachment</i>
+        <i class="material-icons">computer</i>
+        <i class="material-icons">traffic</i>
+
 
     S. max-width
         width: 500px;

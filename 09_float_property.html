@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>horizontal navigation bar</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar{
+            background-color: #2e3031; 
+            overflow: hidden;     
+            position: sticky;        
+            top: 0px; 
+            padding: 10px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            margin: 0px 10px;
+            padding-top: 6px;
+            float: left;
+        }
+        a:hover{
+            color: orange;
+        }
+
+        .login{
+            background-color: #0367aa;
+            border-radius: 10px;
+            padding: 6px 15px;
+            font-weight: bolder;
+            float: right;
+        }
+        .login:hover{
+            color: blueviolet;
+            background-color: rgb(169, 239, 111);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <a href="#home" >Home</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <a class="login" href="#login">Login</a>
+    </div>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>horizontal navigation bar</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .navbar{
+            background-color: #2e3031; 
+            overflow: hidden;     
+            position: sticky;        
+            top: 0px;      
+            display: flex;          
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+        }
+            
+        .navbar a{
+            text-decoration: none;
+            color: white;
+        }
+
+        .navbar__left a{
+            margin: 0px 10px;
+        }
+        .navbar__left a:hover{
+            color: orange;
+        }
+
+        .navbar__right a{
+            background-color: #0367aa;
+            border-radius: 10px;
+            padding: 6px 15px;
+            font-weight: bolder;
+        }
+        .navbar__right a:hover{
+            color: blueviolet;
+            background-color: rgb(169, 239, 111);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+        <div class="navbar__left">
+            <a href="#home" >Home</a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <a href="#about">About</a>
+        </div>
+        <div class="navbar__right">
+            <a href="#login">Login</a>
+        </div>
+    </div>
+
+</body>
+</html> -->

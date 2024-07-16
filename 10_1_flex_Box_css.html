@@ -12,134 +12,72 @@
             border: 3px solid red;
             display: flex;
             flex-direction: row;
-           /* flex-wrap: wrap;*/
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap; 
         }
-
-        #item-1{
-            border: 3px solid blue;
-            width:50px;
-            /*height: 50px; */
-            margin: 0px; 
-            align-self: stretch; /*increse height bez flex-direction is row.*/
-        }
-        #item-2{
-            border: 3px solid lightblue;
-            width:50px;
-            height: 50px; 
-            margin: 0px; 
-        }
-        #item-3{
+        .item{
             border: 3px solid black;
-            width:50px;
-            height: 50px; 
-            margin: 0px; 
-        }
-        #item-4{
-            border: 3px solid green;
-            width:50px;
-            height: 50px; 
-            margin: 0px; 
-        }
-        #item-5{
-            border: 3px solid palevioletred;
-            width:50px;
-            height: 50px; 
-            margin: 0px; 
+            width:80px;
+            height: 80px; 
+            margin: 10px; 
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <p id="item-1" class="item-cl">box1</p>
-        <p id="item-2" class="item-cl">box2</p>
-        <p id="item-3" class="item-cl">box3</p>
-        <p id="item-4" class="item-cl">box4</p>
-        <p id="item-5" class="item-cl">box5</p>
+        <p class="item">box1</p>
+        <p class="item">box2</p>
+        <p class="item">box3</p>
+        <p class="item">box4</p>
+        <p class="item">box5</p>
     </div>
 </body>
 </html>
 
-<!-- 
-    .container{
-        height: 500px;
-        width: 100%;
-        border:2px solid black;
-        /*Initialize the container as a Flex box*/
-        display: flex;
+<!--Notes***************************
+    #flex properties of container...
+        1). display: flex; //Initialize the container as a Flex box.
 
-        /*flex properties of container*/
-        /*1. Flex-direction
-        Default value of this property is "row" 
-        */
-             flex-direction: row;
-             flex-direction: column;
-             flex-direction: row-reverse;
-             flex-direction: column-reverse;
+        2). Flex-direction :- Default value of this property is "row".
+            flex-direction: row;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-direction: column-reverse;
              
-        /*2. wrapping properties for good responsiveness*/
-        flex-wrap:wrap;
-        flex-wrap:wrap-reverse;
+        3). wrapping properties for good responsiveness.
+            flex-wrap:wrap;
+            flex-wrap:wrap-reverse;
         
-        /*shorthand property*/
-        flex-flow: flex-direction flex-wrap;
-        flex-flow: row wrap;
+        Note:- shorthand property*****
+            flex-flow: row wrap; //flex-direction flex-wrap.
         
-        /*3. justify-content: 
-            A. It work "horizontally" when "flex-direction" is "row".
-            B. It work "vertically" when "flex-direction" is "column".
-        */
-        justify-content: center; 
-        justify-content: space-between;
-        justify-content: space-evenly;
-        justify-content: space-around;
+        4). justify-content: 
+            justify-content: center; 
+            justify-content: space-between;
+            justify-content: space-evenly;
+            justify-content: space-around;
+
+        Note:-  i). It work "horizontally" when "flex-direction" is "row".
+                ii). It work "vertically" when "flex-direction" is "column".
         
-        /*4. align-items: 
-            A. It work "vertically" when "flex-direction" is "row".
-            B. It work "horizontally" when "flex-direction" is "column".
-        */
-        align-items: center;
-        align-items: flex-end;
-        align-items: flex-start;
-        align-items: stretch;
-    }
+        5). align-items: 
+            align-items: center;
+            align-items: flex-end;
+            align-items: flex-start;
+            align-items: stretch;
+
+        Note:-  i). It work "vertically" when "flex-direction" is "row".
+                ii). It work "horizontally" when "flex-direction" is "column".
     
-    /*flex properties for item*/
-    #item-1{
-        /*
-        border: 3px solid blue;
-        width:50px;
-        /*height: 50px; */
-        margin: 0px; 
+    #flex properties for item...
+        1). order:2; //higher the order, later it shows up in the container.
+        2). flex-grow:3; //relatively item how fast increase
+        3). flex-shrink:2; //relatively item how fast decrease
+        4). flex-basis:160px;
+            i).  When "flex-direction" is set to "row", "flex-basis" will control width
+            ii). When "flex-direction" is set to "column", "flex-basis" will control heigh
 
-        order:2; /*higher the order, later it shows up in the container*/
-        flex-grow:3; /*relatively item how fast increase*/
-        flex-shrink:2; /*relatively item how fast decrease*/
-
-        flex-basis:160px;
-        /*When "flex-direction" is set to "row", "flex-basis" will control width*/
-        /*When "flex-direction" is set to "column", "flex-basis" will control height*/
-
-        /*align-self:
-            A. It work "vertically" when "flex-direction" is "row".
-            B. It work "horizontally" when "flex-direction" is "column".
-        */
-        align-self: flex-start;
-        align-self: flex-end;
-        align-self: center;
-        align-self: stretch; /*increse height if flex-direction is row. increase width if flex-direction is column.*/
-    }
-        
-
-    #item-2{
-        flex-grow:3;
-        flex-shrink:3;
-        flex-basis:170px;
-    }
-
-    #item-3{
-        /*shorthand property
-        flex: flex-grow flex-shrink flex-basis;
-        */
-        flex: 2 2 230px;
-    }
+        Note:- shorthand property
+            flex: 2 2 230px; //flex: flex-grow flex-shrink flex-basis;
 -->

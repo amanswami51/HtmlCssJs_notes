@@ -6,45 +6,49 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Link html,css,JavaScript</title>
-   <!-- 
-   *****Internal css******
-      <style>
-         selector{
-            property:value;
-         }
-      </style> 
-   -->
-
-   <!-- 
-      ******External css*******
-      <link rel="stylesheet" href="test.css">
-    -->
-
- 
+   
+   <!--Internal css-->
+    <style>
+      .class1{
+         color: red;
+         background-color: blue;
+      }
+      #id1{
+         color: blueviolet;
+      }
+    </style>
 
 </head>
 
 <body>
-   <!-- 
-      ********Inline css********
-    <tag style="property:value;">hi/hello/heyy</tag>    
-   -->
 
-   <!-- 
-      *******External JavaScript*********
-      <script src="test.js"></script>
-   -->
+   <h1>1. Inline css (use style attribute in each tag)</h1>
+   <h3 style="color:red; background-color:blue;">Hi,</h3>
+   <p style="color:blueviolet">This is aman</p>
+   <!--Eg:- <tag style="property:value; property:value;">content<tag> -->
+   <hr>
 
-   <!-- 
-      ******Internal JavaScript********
-      <script>
-         console.log("Hi/hello/heyy");
-      </script>
-    -->
+   <h1>2. Internal css (use style tag in head tag)</h1>
+   <h3 class="class1">Hi,</h3>
+   <p id="id1">This is aman.</p>
+   <!--Eg:- <style>selector{property:value}</style> -->
+   <hr>
+
+   <h1>3. External css</h1>
+   <p>Add "href" of external-css-file through "link" tag in head tag.</p>
+   <!--Eg:- <link rel="stylesheet" href="test.css"> -->
+   <hr>
 
 
-   <h1 style="color:red; background-color:blue; font-size:20px; ">My name is aman</h1>
-   <p>This is aman</p>
+   <h1>4. Internal JavaScript (use script tag in body tag)</h1>
+   <!--Eg:- <script>console.log("Hi/hello/heyy");</script> -->
+   <hr>
+
+
+   <h1>5. External JavaScript</h1>
+   <p>Add "src" of external-js-file through "script" tag in body tag.</p>
+   <!--Eg:- <script src="test.js"></script> -->
+
+
 </body>
-
 </html>
